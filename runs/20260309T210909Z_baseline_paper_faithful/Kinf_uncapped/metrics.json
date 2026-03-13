@@ -1,0 +1,8 @@
+{
+  "n_episodes_requested": 20,
+  "n_episodes_completed": 20,
+  "n_episodes_failed": 0,
+  "clean_completion_rate": 0.0,
+  "total_parse_failures": 40,
+  "total_fallback_uses": 20
+}

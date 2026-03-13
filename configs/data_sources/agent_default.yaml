@@ -1,0 +1,3 @@
+source_name: agent_default
+format: jsonl
+# Currently not required since agent traces map dynamically in code natively, but reserved for completeness

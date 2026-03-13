@@ -1,0 +1,56 @@
+Metadata-Version: 2.4
+Name: bubble-sim
+Version: 0.1.0
+Summary: LLM-agent simulation framework for bubble game experiments
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pydantic>=2.6
+Requires-Dist: pyyaml>=6.0
+Requires-Dist: typer>=0.12
+Requires-Dist: numpy>=1.26
+Requires-Dist: orjson>=3.10
+Requires-Dist: jsonschema>=4.0
+Requires-Dist: pandas>=2.0.0
+Requires-Dist: pyarrow>=12.0.0
+Provides-Extra: dev
+Requires-Dist: pytest>=8.0; extra == "dev"
+Requires-Dist: pytest-cov>=5.0; extra == "dev"
+Requires-Dist: ruff>=0.6; extra == "dev"
+Requires-Dist: black>=24.0; extra == "dev"
+Requires-Dist: pre-commit>=3.7; extra == "dev"
+Dynamic: license-file
+
+# bubble-sim
+
+LLM-agent simulation framework for bubble game experiments.
+
+## Purpose
+The purpose of this project is to simulate and experiment with LLM-based agents in a bubble-game environment.
+
+## Scope
+- LLM-agent behavior simulation.
+- Environment modeling for bubble games.
+- Metrics and evaluation of agent performance.
+
+## Setup
+```bash
+make install
+```
+
+## Repo Structure
+- `src/bubble_sim`: Main package.
+- `tests`: Unit and integration tests.
+- `configs`: Configuration files.
+- `scripts`: Utility scripts.
+
+## Development Commands
+- `make format`: Format code with Black and Ruff.
+- `make lint`: Run linting checks.
+- `make test`: Run tests with pytest.
+- `make check`: Run all linting and tests.
+
+## Roadmap
+- Phase 0.1: Repo setup and standards (current).
+- Phase 0.2: Core environment logic.
+- Phase 0.3: LLM agent integration.

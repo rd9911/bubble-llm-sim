@@ -1,0 +1,7 @@
+session_round_id,participant_id,treatment,cap_type,price,choice,price_index
+ep_decline,p1,baseline,capped,1,no,0
+ep_term,p2,baseline,capped,1,yes,0
+ep_term,p3,baseline,capped,10,yes,1
+ep_term,p4,baseline,capped,100,yes,2
+ep_term,p5,baseline,capped,1000,yes,3
+ep_term,p6,baseline,capped,10000,yes,4

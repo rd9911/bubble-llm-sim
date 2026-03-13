@@ -1,0 +1,2 @@
+[console_scripts]
+bubble-sim = bubble_sim.cli:app

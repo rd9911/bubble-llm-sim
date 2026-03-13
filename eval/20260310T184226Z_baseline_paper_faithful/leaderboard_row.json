@@ -1,0 +1,8 @@
+{
+  "dummy_calib": 0.0,
+  "passed_gate": true,
+  "gate1_operational": true,
+  "gate2_micro": true,
+  "gate3_macro": true,
+  "gate4_heldout": true
+}

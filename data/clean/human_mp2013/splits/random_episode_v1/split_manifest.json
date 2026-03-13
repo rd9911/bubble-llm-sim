@@ -1,0 +1,5 @@
+{
+  "split_name": "random_episode_v1",
+  "method": "random_episode",
+  "dataset_dir": "data/clean/human_mp2013"
+}

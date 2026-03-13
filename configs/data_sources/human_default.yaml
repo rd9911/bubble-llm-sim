@@ -1,0 +1,29 @@
+source_name: human_default
+format: csv
+
+columns:
+  episode_id: session_round_id
+  trader_id: participant_id
+  treatment_name: treatment
+  cap_type: cap_type
+  offered_price: price
+  action: choice
+  realized_payoff_if_known: payoff
+
+constants:
+  env_name: BubbleGameEnv
+  env_version: 0.1.0
+  asset_value: 0
+  limited_liability: true
+  position_uncertainty: true
+  can_infer_from_price: true
+  n_traders_total: 5
+  price_path: [1, 10, 100, 1000, 10000]
+  max_price: 10000
+
+value_maps:
+  action:
+    buy: buy
+    no_buy: no_buy
+    yes: buy
+    no: no_buy

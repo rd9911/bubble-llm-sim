@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "dataset_name": "20260310T184226Z_baseline_paper_faithful_dataset",
+  "created_at_utc": "2026-03-10T18:45:07.743944+00:00",
+  "source_type": "agent",
+  "env_name": "BubbleGameEnv",
+  "env_version": "0.1.0",
+  "n_decisions": 21,
+  "n_episodes": 11,
+  "splits": [
+    "train",
+    "val",
+    "test"
+  ],
+  "decision_file": "decisions.parquet",
+  "episode_file": "episodes.parquet",
+  "decision_schema_hash": "placeholder",
+  "episode_schema_hash": "placeholder",
+  "dataset_hash": "placeholder",
+  "notes": "Agent dataset ingestion"
+}

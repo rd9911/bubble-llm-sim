@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "dataset_name": "human_mp2013",
+  "created_at_utc": "2026-03-09T16:35:19.937285+00:00",
+  "source_type": "human",
+  "env_name": "BubbleGameEnv",
+  "env_version": "0.1.0",
+  "n_decisions": 234,
+  "n_episodes": 12,
+  "splits": [
+    "train",
+    "val",
+    "test"
+  ],
+  "decision_file": "decisions.parquet",
+  "episode_file": "episodes.parquet",
+  "decision_schema_hash": "placeholder",
+  "episode_schema_hash": "placeholder",
+  "dataset_hash": "placeholder",
+  "notes": "Human dataset ingestion"
+}

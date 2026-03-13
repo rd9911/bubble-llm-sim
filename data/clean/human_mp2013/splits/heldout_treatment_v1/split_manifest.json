@@ -1,0 +1,5 @@
+{
+  "split_name": "heldout_treatment_v1",
+  "method": "heldout_treatment",
+  "dataset_dir": "data/clean/human_mp2013"
+}

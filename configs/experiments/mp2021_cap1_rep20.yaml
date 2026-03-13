@@ -1,0 +1,10 @@
+mode: lab_repeated_mp2021
+cap_first_price: 1
+num_periods: 20
+group_size: 3
+subject_endowment_per_period: 1
+exchange_rate_eur_per_ecu: 1
+decision_protocol: simultaneous_private_partial_strategy
+feedback_protocol: own_realized_info_only
+quiz_required: true
+stranger_matching: true

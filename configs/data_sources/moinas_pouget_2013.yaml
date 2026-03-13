@@ -1,0 +1,27 @@
+source_name: human_mp2013
+format: csv
+
+columns:
+  episode_id: session_id
+  trader_id: subject_id
+  treatment_name: treatment
+  cap_type: cap_type
+  offered_price: offered_price
+  action: action
+  price_index: price_index
+  realized_payoff_if_known: realized_payoff_if_known
+
+constants:
+  env_name: BubbleGameEnv
+  env_version: 0.1.0
+  asset_value: 0
+  limited_liability: true
+  position_uncertainty: true
+  can_infer_from_price: true
+  n_traders_total: 5
+  # Note: price_path and max_price are now derived dynamically per treatment by ingest_human.py
+
+value_maps:
+  action:
+    buy: buy
+    no_buy: no_buy

@@ -1,0 +1,13 @@
+{
+  "completed_episodes": [
+    "Kinf_uncapped_ep000",
+    "Kinf_uncapped_ep001"
+  ],
+  "failed_episodes": [],
+  "metrics": {
+    "n_episodes_completed": 2,
+    "n_episodes_failed": 0,
+    "total_parse_failures": 4,
+    "total_fallback_uses": 2
+  }
+}

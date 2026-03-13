@@ -1,0 +1,6 @@
+{
+  "eval_id": "20260309T164439Z_baseline_paper_faithful",
+  "run_dir": "runs/20260309T164439Z_baseline_paper_faithful",
+  "human_dataset": "data/clean/human_mp2013",
+  "split": "heldout_treatment_v1"
+}

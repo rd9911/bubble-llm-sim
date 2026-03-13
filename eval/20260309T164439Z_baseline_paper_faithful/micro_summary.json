@@ -1,0 +1,7 @@
+{
+  "total_buckets": 9,
+  "sparse_bucket_fraction": 0.1111111111111111,
+  "weighted_js_divergence": 0.12590316030378285,
+  "weighted_kl_divergence": 5.839187352962162,
+  "mean_absolute_buy_rate_gap": 0.2703862660944206
+}

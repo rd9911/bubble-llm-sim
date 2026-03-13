@@ -1,0 +1,47 @@
+[
+  {
+    "id": "q1",
+    "text": "Is it possible to be first and be proposed to buy at a price of 100,000?",
+    "correct_answer": "No"
+  },
+  {
+    "id": "q2",
+    "text": "If you are proposed to buy at a price of 1, are you sure to be first?",
+    "correct_answer": "Yes"
+  },
+  {
+    "id": "q3",
+    "text": "If you are proposed to buy at a price of 100,000, are you sure to be second?",
+    "correct_answer": "No"
+  },
+  {
+    "id": "q4",
+    "text": "If you are proposed to buy at a price of 100, are you sure to be third?",
+    "correct_answer": "No"
+  },
+  {
+    "id": "q5",
+    "text": "If you are proposed to buy at a price of 1,000,000, are you sure to be third?",
+    "correct_answer": "Yes"
+  },
+  {
+    "id": "q6",
+    "text": "If you accept to buy at 100, you will propose to resell at",
+    "correct_answer": "1,000"
+  },
+  {
+    "id": "q7",
+    "text": "If you are first, buy at 100, and resell at 1,000, your payoff in the game is",
+    "correct_answer": "10"
+  },
+  {
+    "id": "q8",
+    "text": "If you are first, buy at 100, and find nobody to resell to at 1,000, your payoff in the game is",
+    "correct_answer": "0"
+  },
+  {
+    "id": "q9",
+    "text": "If you refuse to buy, your payoff is",
+    "correct_answer": "1"
+  }
+]

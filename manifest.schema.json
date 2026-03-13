@@ -1,0 +1,52 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "required": [
+        "manifest_version",
+        "run_id",
+        "created_at_utc",
+        "git",
+        "experiment",
+        "environment",
+        "policy",
+        "dataset",
+        "seeds",
+        "runtime",
+        "outputs"
+    ],
+    "properties": {
+        "manifest_version": {
+            "type": "string"
+        },
+        "run_id": {
+            "type": "string"
+        },
+        "created_at_utc": {
+            "type": "string"
+        },
+        "git": {
+            "type": "object"
+        },
+        "experiment": {
+            "type": "object"
+        },
+        "environment": {
+            "type": "object"
+        },
+        "policy": {
+            "type": "object"
+        },
+        "dataset": {
+            "type": "object"
+        },
+        "seeds": {
+            "type": "object"
+        },
+        "runtime": {
+            "type": "object"
+        },
+        "outputs": {
+            "type": "object"
+        }
+    }
+}

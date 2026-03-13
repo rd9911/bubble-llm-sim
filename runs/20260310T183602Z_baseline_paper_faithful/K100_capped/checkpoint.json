@@ -1,0 +1,17 @@
+{
+  "completed_episodes": [
+    "K100_capped_ep000"
+  ],
+  "failed_episodes": [
+    "K100_capped_ep002",
+    "K100_capped_ep004",
+    "K100_capped_ep003",
+    "K100_capped_ep001"
+  ],
+  "metrics": {
+    "n_episodes_completed": 1,
+    "n_episodes_failed": 4,
+    "total_parse_failures": 0,
+    "total_fallback_uses": 0
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "dataset_name": "20260310T184226Z_baseline_paper_faithful_dataset",
+  "n_raw_rows": 42,
+  "n_decision_records": 21,
+  "n_episode_records": 11,
+  "rows_dropped": 21,
+  "hard_error_count": 0,
+  "warning_count": 0,
+  "warnings_by_type": {},
+  "null_rates": {},
+  "duplicates_removed": 0
+}
