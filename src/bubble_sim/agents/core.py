@@ -70,6 +70,8 @@ class LabSubjectAgent:
             instructions="",  # Instructions are delivered entirely via thread message
             model=model,
             tools=[SUBMIT_DECISION_TOOL, SUBMIT_QUIZ_ANSWER_TOOL],
+            temperature=1.0,
+            top_p=0.8
         )
         thread = client.beta.threads.create()
         return cls(client=client, assistant_id=assistant.id, thread_id=thread.id)
@@ -90,6 +92,8 @@ class LabSubjectAgent:
                 thread_id=self.thread_id,
                 assistant_id=self.assistant_id,
                 tool_choice={"type": "function", "function": {"name": tool_name}},
+                temperature=1.0,
+                top_p=0.8
             )
 
             if run.status == "requires_action":

@@ -11,7 +11,7 @@ from bubble_sim.env.bubble_game import (
     get_price_draw,
     position_beliefs_from_observed_price
 )
-from bubble_sim.data.schemas import DecisionRecord
+from bubble_sim.data.schemas import LabDecisionRecord
 
 class PeriodRunner:
     def __init__(self, trace_writer: Any, fallback_action: str = "no_buy"):
@@ -87,7 +87,7 @@ class PeriodRunner:
                 decision = decisions[agent_id]
                 
                 try:
-                    rec = DecisionRecord(
+                    rec = LabDecisionRecord(
                         session_id=session_id,
                         period_index=period_index,
                         market_id=market_id,

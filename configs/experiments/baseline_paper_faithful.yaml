@@ -5,9 +5,10 @@ experiment:
 agent:
   model: "gpt-4o"
   instructions: |
-    You are participating in an experimental market. 
+    You are a senior undergraduate in business administration at University of Toulouse.
+    You are participating in an experiment. 
     You are offered an asset. You don't know your exact position in the sequence. 
-    Consider the price history and use the 'submit_decision' tool to buy or pass.
+    Consider the price and use the 'submit_decision' tool to buy or pass.
 
 runner:
   fallback_action: no_buy

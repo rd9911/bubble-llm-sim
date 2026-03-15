@@ -129,7 +129,7 @@ def simulate(
 
         agent_cfg = cfg.get("agent", {})
         model = agent_cfg.get("model", "gpt-4o")
-        instructions = agent_cfg.get("instructions", "You are a trader.")
+        instructions = agent_cfg.get("instructions", "You are a senior undergraduate in business administration at University of Toulouse. You are participating in an experiment. You are offered an asset. You don't know your exact position in the sequence. Consider the price and use the 'submit_decision' tool to buy or pass.")
         
         import openai
         openai_client = openai.OpenAI()
@@ -248,6 +248,8 @@ def eval(
         import pandas as pd
 
         from bubble_sim.data.ingest_agent import ingest_agent_dataset
+        from bubble_sim.eval.macro_metrics import compute_macro_fidelity_summary, compute_macro_gaps
+        from bubble_sim.eval.replication_targets import default_bubble_game_targets
         from bubble_sim.eval.reports import generate_micro_fidelity_report
         
         combined_traces = run_dir / "combined_traces.jsonl"
@@ -274,6 +276,18 @@ def eval(
         agent_df = pd.read_parquet(agent_df_path)
         human_df = pd.read_parquet(human_df_path)
         
+        # Macro metrics integration
+        episodes_df_path = run_dir / dataset_name / "episodes.parquet"
+        if episodes_df_path.exists():
+            episodes_df = pd.read_parquet(episodes_df_path)
+            macro_raw = compute_macro_fidelity_summary(episodes_df, agent_df)
+            targets = default_bubble_game_targets()
+            macro = compute_macro_gaps(macro_raw, targets)
+            # Merge raw values for visibility
+            macro.update({f"raw_{k}": v for k, v in macro_raw.items()})
+        else:
+            macro = {"dummy_macro": 0.0}
+
         eval_out = Path("eval") / run_dir.name
         generate_micro_fidelity_report(human_df, agent_df, eval_out)
         
@@ -288,7 +302,6 @@ def eval(
             with open(micro_summary_path) as f:
                 micro = json.load(f)
                 
-        macro = {"dummy_macro": 0.0}
         calib = {"dummy_calib": 0.0}
         gate = {"passed_gate": True, "gate1_operational": True, "gate2_micro": True, "gate3_macro": True, "gate4_heldout": True}
         scorecard = {"Behavior": {"fidelity": "green"}}
