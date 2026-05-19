@@ -341,6 +341,10 @@ def simulate_lab(
     subjects: int = typer.Option(72, help="Number of subjects to simulate in a session"),
     sessions: int = typer.Option(1, help="Number of independent sessions"),
     output_dir: Path = typer.Option(Path("runs"), help="Output directory for simulation runs"),
+    model: str = typer.Option("gpt-5-mini-2025-08-07", help="Model to use for agents"),
+    temperature: float = typer.Option(1.0, help="Temperature for the model"),
+    reasoning_effort: str = typer.Option("medium", help="Reasoning effort (if using o-series models)"),
+    max_tokens: int = typer.Option(None, help="Max completion tokens"),
 ):
     """Run the rigorous paper-faithful lab simulation pipeline."""
     import datetime
@@ -375,7 +379,7 @@ def simulate_lab(
     treatment_cap = cfg.get("cap_first_price", 10000)
     num_periods = cfg.get("num_periods", 10)
     
-    run_id = datetime.datetime.utcnow().strftime("%Y%m%dT%H%M%SZ") + f"_lab_cap{treatment_cap}"
+    run_id = datetime.datetime.utcnow().strftime("%Y%m%dT%H%M%SZ") + f"_lab_cap{treatment_cap}_subj{subjects}_rep{num_periods}"
     run_dir = output_dir / run_id
     run_dir.mkdir(parents=True, exist_ok=True)
     
@@ -395,11 +399,37 @@ def simulate_lab(
     for s_idx in range(sessions):
         session_id = f"{run_id}_s{s_idx}"
         typer.echo(f"Starting session {session_id} with {subjects} subjects")
-        
+        # Load system prompt
+        system_prompt_path = Path("src/bubble_sim/prompts/instructions/system_prompt.md")
+        system_prompt = ""
+        if system_prompt_path.exists():
+            with open(system_prompt_path) as sp_f:
+                system_prompt = sp_f.read()
+                
         session_agents = []
+        agent_kwargs = {"temperature": temperature}
+        if max_tokens is not None:
+            agent_kwargs["max_completion_tokens"] = max_tokens
+        if model.startswith("o"):
+            agent_kwargs["reasoning_effort"] = reasoning_effort
+
+        def make_agent(index: int) -> LabSubjectAgent:
+            """Factory that creates a new agent with the same config."""
+            experience_level = rng.choice(["senior", "junior"])
+            agent_instructions = system_prompt.replace(
+                "senior undergraduate", f"{experience_level} undergraduate"
+            )
+            return LabSubjectAgent.create(
+                client=openai_client,
+                model=model,
+                name=f"Sub_{index}_{session_id}",
+                instructions=agent_instructions,
+                archetype_id=experience_level,
+                **agent_kwargs,
+            )
+
         for i in range(subjects):
-            agent = LabSubjectAgent.create(client=openai_client, model="gpt-4o", name=f"Sub_{i}_{session_id}")
-            session_agents.append(agent)
+            session_agents.append(make_agent(i))
             
         period_runner = PeriodRunner(trace_writer=trace_writer)
         manifest = {"run_id": session_id}
@@ -407,12 +437,14 @@ def simulate_lab(
             period_runner=period_runner, 
             manifest=manifest, 
             subjects=session_agents, 
-            trace_writer=trace_writer
+            trace_writer=trace_writer,
+            agent_factory=make_agent,
         )
         
         exp_runner.run_session(session_id, treatment_cap, num_periods, rng)
         
-        for agent in session_agents:
+        # Tear down qualified subjects (failed agents were already torn down)
+        for agent in exp_runner.subjects:
             agent.teardown()
             
     trace_file.close()
@@ -458,6 +490,37 @@ def report_lab(
 ):
     """Generate final comparison report for the lab mode."""
     typer.secho(f"Generated lab report for {run_dir}!", fg=typer.colors.GREEN)
+
+
+@app.command()
+def run_all_simulations(
+    output_dir: Path = typer.Option(Path("runs"), help="Output directory for simulation runs"),
+    model: str = typer.Option("gpt-5-mini-2025-08-07", help="Model to use for agents"),
+    temperature: float = typer.Option(1.0, help="Temperature for the model"),
+    reasoning_effort: str = typer.Option("medium", help="Reasoning effort (if using o-series models)"),
+    max_tokens: int = typer.Option(None, help="Max completion tokens"),
+):
+    """Run all simulations described in the 2x2 design one after another."""
+    experiments = [
+        ("configs/experiments/mp2021_cap1_rep10.yaml", 48),
+        ("configs/experiments/mp2021_cap10000_rep10.yaml", 54),
+        ("configs/experiments/mp2021_cap1_rep20.yaml", 12),
+        ("configs/experiments/mp2021_cap10000_rep20.yaml", 18),
+    ]
+
+    for config_path, subjects in experiments:
+        typer.secho(f"\nRunning simulation for {config_path} with {subjects} subjects...", fg=typer.colors.MAGENTA)
+        simulate_lab(
+            config=Path(config_path),
+            subjects=subjects,
+            sessions=1,
+            output_dir=output_dir,
+            model=model,
+            temperature=temperature,
+            reasoning_effort=reasoning_effort,
+            max_tokens=max_tokens,
+        )
+    typer.secho("All simulations completed successfully!", fg=typer.colors.GREEN)
 
 if __name__ == "__main__":
     app()

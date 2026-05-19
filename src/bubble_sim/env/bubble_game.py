@@ -18,6 +18,8 @@ class BuyDecision:
     action: Literal["buy", "no_buy"]
     confidence: float | None = None
     belief_success_resale: float | None = None
+    reasoning: str | None = None
+    reasoning_tokens: int | None = None
     rationale_short: str | None = None
 
 

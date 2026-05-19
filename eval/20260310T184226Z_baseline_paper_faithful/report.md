@@ -9,7 +9,7 @@
 - **weighted_js_divergence**: 0.03484015548985887
 - **weighted_kl_divergence**: 0.11692552715067234
 - **mean_absolute_buy_rate_gap**: 0.1634146341463414
-
+ 
 ## Macro Fidelity
 - **bubble_depth_gap**: -1.5
 - **snowball_slope_error**: -0.4500000000000001

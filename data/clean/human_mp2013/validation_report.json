@@ -1,8 +1,8 @@
 {
   "dataset_name": "human_mp2013",
   "n_raw_rows": 0,
-  "n_decision_records": 234,
-  "n_episode_records": 12,
+  "n_decision_records": 1620,
+  "n_episode_records": 540,
   "rows_dropped": 0,
   "hard_error_count": 0,
   "warning_count": 0,

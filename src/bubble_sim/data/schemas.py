@@ -13,6 +13,7 @@ class SubjectRecord:
     quiz_attempt_count: int
     quiz_passed: bool
     seed: int | None
+    archetype_id: str | None = None
 
 @dataclass(frozen=True)
 class PeriodAssignmentRecord:
@@ -82,6 +83,8 @@ class QuizRecord:
     question_id: str
     answer_submitted: str
     answer_correct: bool
+    rationale: str | None = None
+    archetype_id: str | None = None
 
 @dataclass(frozen=True)
 class MarketOutcomeRecord:
@@ -113,6 +116,26 @@ class LabDecisionRecord:
     bubble_size: str
     first_price_draw: int
     cap_first_price: int
+
+@dataclass(frozen=True)
+class LabDecisionRecordV2:
+    session_id: str
+    cap_value: int
+    period_index: int
+    subject_id: str
+    group_id: int
+    payoff_this_period: int
+    cumulative_payoff: int
+    position: int
+    offered_price: int
+    action: int
+    step: int
+    confidence: float | None
+    belief_success_resale: float | None
+    reasoning: str | None
+    reasoning_tokens: int | None
+    rationale_short: str | None
+    archetype_id: str | None = None
 
 @dataclass(frozen=True)
 class EpisodeRecord:

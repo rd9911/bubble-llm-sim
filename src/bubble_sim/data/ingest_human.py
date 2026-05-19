@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-import csv
+import pandas as pd
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -53,32 +53,63 @@ def ingest_human_dataset(
         "max_price": 10000,
     }
 
+    cfg: dict = {}
     if source_config_path:
         with Path(source_config_path).open() as f:
-            cfg = yaml.safe_load(f)
+            cfg = yaml.safe_load(f) or {}
             col_map.update(cfg.get("columns", {}))
             consts.update(cfg.get("constants", {}))
 
     raw_rows = []
-    with input_path.open("r") as f:
-        reader = csv.DictReader(f)
-        for row in reader:
-            parsed = RawDecisionRow(
-                episode_id=row.get(col_map["episode_id"], ""),
-                trader_id=row.get(col_map.get("trader_id", "")),
-                offered_price=(
-                    int(row[col_map["offered_price"]]) if col_map["offered_price"] in row else None
-                ),
-                action=row.get(col_map["action"]),
-                treatment_name=row.get(col_map.get("treatment_name", "")),
-                cap_type=row.get(col_map.get("cap_type", "")),
-                price_index=(
-                    int(row[col_map["price_index"]]) if col_map["price_index"] in row else None
-                ),
-                realized_payoff_if_known=None,
-                raw_payload=row,
-            )
-            raw_rows.append(parsed)
+    
+    # Read via pandas
+    if input_path.suffix.lower() == '.xlsx':
+        sheet_name = cfg.get("sheet_name", 0) if source_config_path else 0
+        df = pd.read_excel(input_path, sheet_name=sheet_name)
+    else:
+        df = pd.read_csv(input_path)
+        
+    for _, row_series in df.iterrows():
+        row = row_series.to_dict()
+        
+        # Format mapping correctly since pandas might read numbers as floats
+        def get_int(val):
+            if pd.isna(val): return None
+            return int(val)
+            
+        # For data_bubble_game.xlsx: we construct an episode_id since there is no session_id string.
+        # Original dataset uses "Session", "Period", "Group" to define an episode.
+        session_val = str(row.get(col_map["episode_id"], ""))
+        period_val = str(row.get(col_map.get("period_index", "Period"), ""))
+        group_val = str(row.get(col_map.get("group_id", "Group"), ""))
+        ep_id = f"{session_val}_{period_val}_{group_val}" if session_val else ""
+
+        # Override treatment name and cap type logically based on Cap column from the new dataset
+        cap_val = row.get(col_map.get("cap_value", "Cap"))
+        
+        treatment_name = str(row.get(col_map.get("treatment_name", "")))
+        if cap_val is not None and not pd.isna(cap_val):
+            treatment_name = f"K{int(cap_val)}"
+            row["cap_value"] = cap_val
+
+        parsed = RawDecisionRow(
+            episode_id=ep_id,
+            trader_id=str(row.get(col_map.get("trader_id", ""))),
+            offered_price=(
+                get_int(row[col_map["offered_price"]]) if col_map["offered_price"] in row else None
+            ),
+            # value map logic if action is 0/1
+            action="buy" if row.get(col_map["action"]) == 1 else ("no_buy" if row.get(col_map["action"]) == 0 else str(row.get(col_map["action"]))),
+            treatment_name=treatment_name,
+            cap_type=str(row.get(col_map.get("cap_type", "capped"))) if col_map.get("cap_type") in row else "capped", # Default to capped if not mapped
+            price_index=(
+                get_int(row[col_map["price_index"]]) if col_map.get("price_index") in row else None
+            ),
+            realized_payoff_if_known=None,
+            raw_payload=row,
+        )
+            
+        raw_rows.append(parsed)
 
     # Pre-compute inferred price paths per treatment
     # In MP2013, K1 is 1->10, K100 is 1->10->100, etc.
@@ -158,7 +189,7 @@ def ingest_human_dataset(
         raise RuntimeError(
             f"Failed to find any valid episode IDs using column mapping: '{col_map['episode_id']}'. "
             "Please ensure you are providing the correct --source-config for your dataset (e.g. "
-            "--source-config configs/data_sources/moinas_pouget_2013.yaml)"
+            "--source-config configs/data_sources/bubble_game_original.yaml)"
         )
 
     decisions: list[DecisionRecord] = []

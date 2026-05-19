@@ -11,7 +11,8 @@ from bubble_sim.env.bubble_game import (
     get_price_draw,
     position_beliefs_from_observed_price
 )
-from bubble_sim.data.schemas import LabDecisionRecord
+import math
+from bubble_sim.data.schemas import LabDecisionRecordV2
 
 class PeriodRunner:
     def __init__(self, trace_writer: Any, fallback_action: str = "no_buy"):
@@ -36,13 +37,13 @@ class PeriodRunner:
         price_draw = get_price_draw(treatment_cap, rng)
         first_price = price_draw.first_price
         
-        subject_ids = tuple(agent.assistant_id for agent in group_subjects)
+        subject_ids = tuple(agent.conversation_id for agent in group_subjects)
         
         # 2. Assign positions & prices
         decisions: dict[str, BuyDecision] = {}
         
         for agent in group_subjects:
-            agent_id = agent.assistant_id
+            agent_id = agent.conversation_id
             pos = assigned_positions[agent_id]
             
             if pos == 1:
@@ -64,6 +65,8 @@ class PeriodRunner:
                     action=raw_decision["action"],
                     confidence=raw_decision.get("confidence"),
                     belief_success_resale=raw_decision.get("belief_success_resale"),
+                    reasoning=raw_decision.get("reasoning"),
+                    reasoning_tokens=raw_decision.get("_reasoning_tokens"),
                     rationale_short=raw_decision.get("rationale_short")
                 )
             else:
@@ -83,25 +86,29 @@ class PeriodRunner:
         # 4. Write decision records
         if hasattr(self.trace_writer, "write"):
             for agent in group_subjects:
-                agent_id = agent.assistant_id
+                agent_id = agent.conversation_id
                 decision = decisions[agent_id]
                 
+                
                 try:
-                    rec = LabDecisionRecord(
+                    rec = LabDecisionRecordV2(
                         session_id=session_id,
+                        cap_value=treatment_cap,
                         period_index=period_index,
-                        market_id=market_id,
                         subject_id=agent_id,
-                        action=decision.action,
-                        confidence=decision.confidence,
-                        belief_success_resale=decision.belief_success_resale,
-                        decision_relevant=realization.decision_relevant_by_subject[agent_id],
-                        actual_proposed_to_trade=realization.feedback_by_subject[agent_id].actually_proposed,
+                        group_id=hash(market_id) % 100000, # Mock group ID or we need to pass it
                         payoff_this_period=realization.feedback_by_subject[agent_id].period_gain,
                         cumulative_payoff=realization.feedback_by_subject[agent_id].cumulative_gain,
-                        bubble_size=realization.realized_bubble_size,
-                        first_price_draw=first_price,
-                        cap_first_price=treatment_cap
+                        position=assigned_positions[agent_id],
+                        offered_price=realization.offered_price_by_subject[agent_id],
+                        action=1 if decision.action == "buy" else 0,
+                        step=int(round(math.log10((treatment_cap * 100) / realization.offered_price_by_subject[agent_id]))),
+                        confidence=decision.confidence,
+                        belief_success_resale=decision.belief_success_resale,
+                        reasoning=decision.reasoning,
+                        reasoning_tokens=decision.reasoning_tokens,
+                        rationale_short=decision.rationale_short,
+                        archetype_id=agent.archetype_id,
                     )
                     self.trace_writer.write(rec)
                 except Exception:

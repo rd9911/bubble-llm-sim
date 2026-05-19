@@ -1,12 +1,12 @@
 {
   "schema_version": "1.0",
   "dataset_name": "human_mp2013",
-  "created_at_utc": "2026-03-09T16:35:19.937285+00:00",
+  "created_at_utc": "2026-04-30T10:14:46.260648+00:00",
   "source_type": "human",
   "env_name": "BubbleGameEnv",
   "env_version": "0.1.0",
-  "n_decisions": 234,
-  "n_episodes": 12,
+  "n_decisions": 1620,
+  "n_episodes": 540,
   "splits": [
     "train",
     "val",

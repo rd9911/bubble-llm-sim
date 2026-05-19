@@ -112,11 +112,44 @@ def convert_traces(input_path, output_path):
 
     df = pd.DataFrame(records)
     
-    # Order columns logically
-    priority_cols = ['session_id', 'period_index', 'market_id', 'subject_id', 'run_id', 'episode_id', 'step_index', 'action']
-    cols = [c for c in priority_cols if c in df.columns]
-    other_cols = [c for c in df.columns if c not in cols]
-    df = df[cols + other_cols]
+    # Check if this is LabDecisionRecordV2 format
+    if 'cap_value' in df.columns:
+        # Rename to target columns
+        rename_map = {
+            'session_id': 'Session',
+            'cap_value': 'Cap',
+            'period_index': 'Period',
+            'subject_id': 'Subject',
+            'group_id': 'Group',
+            'payoff_this_period': 'Profit',
+            'cumulative_payoff': 'TotalProfit',
+            'position': 'Position',
+            'offered_price': 'BuyPrice',
+            'action': 'BuyDecision',
+            'step': 'Step',
+            'confidence': 'Confidence',
+            'belief_success_resale': 'BeliefResale',
+            'reasoning': 'Rationale',
+            'reasoning_tokens': 'ReasoningTokens'
+        }
+        df = df.rename(columns=rename_map)
+        
+        # Adjust Period to be 1-indexed (since simulation uses 0-indexed)
+        if 'Period' in df.columns:
+            df['Period'] = df['Period'] + 1
+            
+        target_cols = ['Session', 'Cap', 'Period', 'Subject', 'Group', 'Profit', 'TotalProfit', 'Position', 'BuyPrice', 'BuyDecision', 'Step', 'Confidence', 'BeliefResale', 'Rationale', 'ReasoningTokens']
+        # Filter only existing columns from target
+        final_cols = [c for c in target_cols if c in df.columns]
+        # Append any remaining just in case
+        other_cols = [c for c in df.columns if c not in final_cols]
+        df = df[final_cols + other_cols]
+    else:
+        # Fallback for old/legacy format
+        priority_cols = ['session_id', 'period_index', 'market_id', 'subject_id', 'run_id', 'episode_id', 'step_index', 'action']
+        cols = [c for c in priority_cols if c in df.columns]
+        other_cols = [c for c in df.columns if c not in cols]
+        df = df[cols + other_cols]
     
     df.to_csv(output_path, index=False)
     print(f"Successfully converted {len(records)} records to {output_path}")

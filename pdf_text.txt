@@ -1,0 +1,1388 @@
+The Bubble Game: An Experimental Study of
+Speculation1
+Sophie Moinas and Sebastien Pouget2
+July, 2012
+1We would like to thank Franklin Allen, Elena Asparouhova, Andrea Attar,
+Snehal Banerjee, Milo Bianchi, Bruno Biais, Peter Bossaerts, Christophe Bisi ere,
+Georgy Chabakauri, Sylvain Chassang, John Conlon, Tony Doblas-Madrid, James
+Dow, Xavier Gabaix, Alex Guembel, Jonathan Ingersoll, Guo Kai, Weicheng Lian,
+Thierry Magnac, Nour Meddahi, Andrew Metrick, John F. Nash Jr., Charles Nous-
+sair, Thomas Palfrey, Alessandro Pavan, Gwenael Piaser, Luis Rayo, Jean Tirole,
+Reinhard Selten, Paul Woolley, Bilge Yilmaz, and especially Thomas Mariotti, as
+well as seminar participants in Bonn University, Luxembourg University, Lyon Uni-
+versity (GATE), Toulouse University, Paris Dauphine University, the Paris School
+of Economics, the London Business School, the Midwest Macroeconomics Meet-
+ings, the CSIO-IDEI workshop in Northwestern University, The Wharton School of
+the University of Pennsylvania, Yale University, the New York Fed, Princeton Uni-
+versity, Caltech, University of Utah, and the 2011 PWC conference at UTS Sydney,
+for helpful comments. An earlier version of this paper was circulated under the ti-
+tle \Rational and Irrational Bubbles: an Experiment". Financial support from the
+Agence Nationale de la Recherche (ANR-09-BLAN-0358-01) is gratefully acknowl-
+edged. This research was conducted within and supported by the Paul Woolley
+Research Initiative on Capital Market Dysfonctionalities at IDEI-R, Toulouse.
+2University of Toulouse (Toulouse School of Economics and IAE), Place Ana-
+tole France, 31000 Toulouse, France, sophie.moinas@univ-tlse1.fr, spouget@univ-
+tlse1.fr.Abstract
+We propose a bubble game that involves sequential trading of an asset com-
+monly known to be valueless. Because some traders do not know where they
+stand in the market sequence, the game allows for a bubble at the Nash equi-
+librium when there is no cap on the maximum price. We run experiments
+both with and without a price cap. Structural estimation of behavioral game
+theory models suggests that quantal responses and analogy-based expecta-
+tions are important drivers of speculation.
+Keywords: Rational bubbles, irrational bubbles, experiments,
+cognitive hierarchy model, quantal response equilibrium, analogy-
+based expectation equilibrium1 Introduction
+Historical and recent economic developments such as the South Sea, Mis-
+sissippi, and dot com price run-up episodes suggest that nancial markets
+are prone to bubbles and crashes. However, to the extent that fundamental
+values cannot be directly observed in the eld, it is very dicult to empiri-
+cally demonstrate that these episodes actually correspond to mispricings.1To
+overcome this diculty and study bubble phenomena, economists have relied
+on the experimental methodology: in the laboratory, fundamental values are
+induced by the researchers and can thus be compared to asset prices. Start-
+ing with Smith, Suchanek and Williams (1988), many researchers document
+the existence of speculative bubbles in experimental nancial markets.2
+We propose a bubble game that complements Smith et al. (1988) and is
+simple enough to be analyzed using the tools of (behavioral) game theory.
+Moreover, it enables to control for the number of trading opportunities thus
+easing the interpretation of experimental data. The bubble game features
+a sequential market for an asset that generates no cash ow (and this is
+announced publicly to all market participants). The price proposed to the
+rst trader in the market sequence is random and the subsequent price path is
+exogenous and chosen such that most traders do not know where they stand
+in the market sequence.3Traders have limited liability and are nanced by
+outside nanciers. At each point in the sequence, an incoming trader has the
+choice between buying or not at the proposed price. If he declines the oer,
+the game ends and the current owner is stuck with the asset.
+When there is a price cap (consistent with the fact that there is a nite
+amount of wealth in the economy), only irrational bubbles can form: upon
+receiving the highest potential price, a trader realizes that he is last in the
+market sequence and, if rational, refuses to buy. Even if not sure to be last
+1In this paper, we dene the fundamental value of an asset as the price at which agents
+would be ready to buy the asset given that they cannot resell it later. See Camerer (1989)
+and Brunnermeier (2009) for surveys on bubbles.
+2The design created by Smith, Suchanek and Williams (1988) features a double auc-
+tion market for an asset that pays random dividends in several successive periods. The
+subsequent literature rened this design to show that bubbles also tend to arise in call
+markets (Van Boening, Williams, LaMaster, 1993), with a constant fundamental value
+(Noussair, Robin, Rueux, 2001) and with lottery-like assets (Ackert, Charupat, Deaves,
+and Kluger, 2006), but tend to disappear when some traders are experienced (Dufwenberg,
+Lindqvist, and Moore, 2005), when there are futures markets (Porter and Smith, 1995)
+and when short-sales are allowed (Ackert, Charupat, Church, and Deaves, 2005).
+3Our set up is inspired by the two-envelope puzzle discussed by Nalebu (1989) and,
+especially, Geanakoplos (1992). The Supplementary Appendix available online relates the
+bubble game to this puzzle as well as to the Saint-Petersburg paradox.
+1in the market sequence, the previous trader, if rational, also refuses to buy
+because he anticipates that the next trader will know he is last and will
+refuse to trade. This backward induction argument rules out the existence of
+bubbles when there is a price cap, if all traders are rational and rationality
+is common knowledge. By increasing the level of the cap, one increases the
+number of steps of iterated reasoning needed to rule out the bubble. As a
+result, varying the level of the cap enables the experimenter to understand
+how bounded rationality or lack of higher-order knowledge of rationality af-
+fect speculative bubbles. This is of interest in light of the theoretical analyses
+of Morris, Rob, and Shin (1995) and Morris, Postlewaite, and Shin (1995)
+who show that lack of common knowledge fosters bubble formation.
+When the price cap is innite, bubbles can be rational because no trader
+is ever sure to be last in the market sequence. Proposing an experimental
+analysis of rational bubbles is dicult because extant theories in which bub-
+bles are common knowledge involve innite trading opportunities and innite
+losses.4 5The bubble game overcomes these diculties: there is a nite num-
+ber of trades and the potentially innite losses are concentrated in the hands
+of outside nanciers who are consequently not part of the experiment.
+Our experiment features various treatments depending on the existence
+and the level of a price cap. Subjects participate in only one treatment and
+in a one-shot game.6Our experimental results are as follows. First, bubbles
+arise whether or not there is a cap on prices. Bubbles thus form even if
+they would be ruled out by backward induction. Second, the propensity for
+a subject to enter a bubble increases with the distance between the oered
+price and the maximum price. We refer to this phenomenon as a snowball
+eect, and show that it is related to a higher probability not to be last and
+4Such an innite number of trading opportunities may derive from innite horizon
+models (see, for example, Tirole (1985) for deterministic bubbles, Blanchard (1979) and
+Weil (1987) for stochastic bubbles, Abreu and Brunnermeier (2003), and Doblas-Madrid
+(2012) for clock games), or from continuous trading models (see Allen and Gorton, 1993).
+5The theoretical analyses of Allen, Morris, and Postlewaite (1993), and Conlon (2004)
+show that rational bubbles can occur with a nite number of trading opportunities and
+without exposing participants to potentially innite losses. These analyses however involve
+asymmetric information regarding the asset cash ows. In order to be in line with the lit-
+erature on experimental bubbles, we design an experiment in which there is no asymmetric
+information on the asset payo. Because trading is not continuous, asset prices as well as
+potential gains and losses have to grow without bounds for a bubble to be sustained at
+equilibrium (see Tirole, 1982).
+6The Supplementary Appendix reports two robustness experiments. In the rst ex-
+periment, the same treatments are used but the game is now repeated ve times with
+stranger matching. In the second experiment, a one-shot game experiment is organized
+with executive MBA students. Experience with the game or in business does not eliminate
+speculation in the bubble game.
+2to a higher number of steps of iterated reasoning.
+Dierent explanations based on various generalizations of the Nash equi-
+librium can be put forward to explain these results. First, because the bub-
+ble game involves introspective and iterated reasoning, one could think of
+the Cognitive Hierarchy (hereafter CH) model of Camerer, Ho, and Chong
+(2004). This model considers that players underestimate other agents' so-
+phistication (see, for example, Camerer and Lovallo (1999) for evidence con-
+sistent with such underestimation in an experimental entry game). Second,
+because the game requires longer and longer chains of belief formation when
+a player is further away from the maximum potential price, one could also
+expect the Quantal Response Equilibrium (hereafter QRE) of Mac Kelvey
+and Palfrey (1995) to be relevant. The QRE captures strategic uncertainty
+and its propagation across nodes of the game (see, for example, Mc Kelvey
+and Palfrey (1998) for an application of the QRE to the centipede game).
+Finally, because players in the bubble game dier according to the trans-
+action price they are oered, various types of analogy classes arise quite
+naturally. The Analogy-Based Expectation Equilibrium (hereafter ABEE)
+of Jehiel (2005) could thus be pertinent (see Huck, Jehiel, and Rutter (2011)
+for evidence consistent with players using analogy reasoning in normal form
+games).7Our theoretical analysis shows that each of these three generaliza-
+tions can account for the main stylized fact from the experiment, namely,
+the existence of bubbles even when there is a price cap and the presence of
+a snowball eect. One of the main contribution of the present paper is then
+to test which of these explanations is most likely from an empirical point of
+view. This enables us to learn more about the nature of speculation in the
+bubble game.
+We estimate various specications of two models of bounded rationality:
+the Subjective Quantal Response Equilibrium (hereafter SQRE) of Rogers,
+Palfrey, and Camerer (2009), and the Analogy-Based Expectation Equilib-
+rium (hereafter ABEE) of Jehiel (2005). The SQRE is an equilibrium concept
+in which agents depart from Nash equilibrium due to less than perfect payo
+responsiveness (players might not always choose the best response to their
+beliefs regarding other players' behavior) or due to erroneous expectations re-
+garding other players' payo responsiveness. The SQRE nests the QRE that
+features less than perfect payo responsiveness but rational expectations,
+and the CH model that features perfect responsiveness but underestimation
+7In the ABEE logic, agents use simplied representations of their environment in order
+to form expectations. In particular, agents are assumed to bundle nodes of the game into
+analogy classes. Agents then form correct beliefs concerning the average behavior within
+each analogy class.
+3of other players' one.8Estimating SQRE and its various nested models, we
+show that speculation in the bubble game is related to quantal responses
+rather than to cognitive hierarchies. Since each subject plays only once, it is
+somehow surprising that equilibrium considerations embedded in QRE (and
+also in ABEE, see below for the results) matter to explain behavior in our
+experiment. The best-tting specication in this class is a Heterogeneous
+Quantal Response Equilibrium (hereafter HQRE) that generalizes the QRE
+to take into account the fact that payo responsiveness varies across subjects.
+The ABEE oers an interesting complementary point of view on the bub-
+ble game.9Bianchi and Jehiel (2011) indeed suggest that the ABEE logic
+can generate bubbles in an environment in which they do not arise if all
+traders are commonly known to be perfectly rational. Our experiment en-
+ables us to test what type of analogy classes best explains speculation in the
+bubble game. Our results show that an ABEE with two analogy classes, one
+including the traders who know they are not last and the other including
+the remaining traders, has a t that is not signicantly dierent dierent at
+5% from the HQRE when estimated on the data from treatments in which
+not all players know their position in the market sequence.10The main mes-
+sage of the paper is thus that both stochastic choices and analogy classes are
+important drivers of speculation in the bubble game.
+The rest of the paper is organized as follows. The next section compares
+the bubble game to the previous literature. Section 3 presents the bubble
+game and the Bayesian Nash predictions. Section 4 derives the behavioral
+game theory predictions using SQRE, and ABEE logics. The empirical re-
+sults are in Section 5. Section 6 concludes and provides potential extensions.
+2 Literature review
+The bubble game in which agents trade sequentially can be viewed as a
+generalization of the centipede game in which not all players know where
+8Both the SQRE and the ABEE as well as their various specications are introduced
+more precisely in Section 4 of the paper.
+9When estimating ABEE, we follow Huck, Jehiel, and Rutter (2011) and consider that
+agents play noisy best responses to their beliefs regarding other traders' behavior.
+10The t of ABEE with two classes is signicantly lower than the one of the HQRE
+when estimated on the entire data that includes an additional centipede-like treatment in
+which all players know where they stand in the market sequence. Augmenting the ABEE
+to include potential heterogeneity in individual payo responsiveness improves the t of
+the ABEE but not signicantly.
+4they stand in the sequence.11 12The bubble game shares some features with
+the centipede game. On the one hand, because of limited liability, the sum
+of traders' potential gains increases as the bubble grows. On the other hand,
+when there is a price cap, the game can be solved by backward induction.
+There are however several important dierences between the bubble game
+and the centipede game. First, our generalization enables the existence of
+a bubble equilibrium when there is no cap on prices, without relying on
+an innite horizon game. Second, since traders play only once, there is
+no reputation building considerations in the bubble game. Third, in the
+bubble game, traders are oered a price at which they can buy. This price
+reveals information which enables them to perform inferences regarding their
+position. This informational ingredient is not present in the centipede game.
+These conceptual dierences have important consequences from an ex-
+perimental point of view. First, one can perform a bubble experiment in
+an environment in which there actually exists a bubble equilibrium. Sec-
+ond, the absence of reputational issues eliminates one potential explanation
+for behavior that is not really relevant for bubbles from an empirical per-
+spective. Third, the informational aspect of our game opens the scope for
+behavioral regularities that are not present in the centipede game. In partic-
+ular, we show that QRE is better at explaining speculative behavior than CH
+which is the opposite to what has been previously found on the centipede
+game.13The relative importance of quantal responses compared to cogni-
+tive hierarchies for bubbles is a novel empirical nding that opens interesting
+perspectives for the understanding of speculative behavior.
+Our experimental analysis is also related to Lei, Noussair and Plott (2001)
+and to Brunnermeier and Morgan (2010).14Lei, Noussair and Plott (2001)
+use Smith et al. (1988)'s design and show that, even when they cannot
+11See, for example, Mc Kelvey and Palfrey (1992) for an experimental analysis of the
+centipede game.
+12This is related to the absent-minded centipede game proposed by Dulleck and
+Oechssler (1997): in a classic centipede game, some agents suer from imperfect recall
+and may not realize that they have reached the end of the game. The bubble game is
+dierent in the sense that even traders with perfect recall may not know where they stand
+in the sequence, and that price information received by traders enables further inference
+regarding their position.
+13See, for example, the experimental investigations of the centipede game by Mc Kelvey
+and Palfrey (1992) who apply the QRE logic, and by Kawagoe and Takizawa (2010) who
+apply the CH logic and argue that it better ts the data than the QRE logic.
+14A related analysis of bubbles is oered by Palfrey and Wang (2012) who experimentally
+study speculation due to traders' dierential interpretation of public signals. A recent
+working paper by Asparouhova, Bossaerts, and Tran (2011) study bubbles in a laboratory
+experiment in which the asset payo is determined by the result of a centipede game.
+5resell and realize capital gains, some participants still buy the asset at a
+price which exceeds the sum of the expected dividends. This behavior is
+consistent with risk-loving preferences or violation of dominance. We extend
+Lei et al. (2001)'s analysis in the sense that, in our design, i) risk preferences
+cannot explain speculation by agents who are oered the maximum price
+(and thus cannot resell), and ii) one can observe the behavior of traders who
+need to perform one, two and even more steps of iterated reasoning to nd
+out that speculating is not an equilibrium.
+Brunnermeier and Morgan (2010) study clock games both from a theo-
+retical and an experimental standpoint. These clock games can indeed be
+viewed as metaphors of \bubble ghting" by speculators, gradually and pri-
+vately informed of the fact that an asset is overvalued. Speculators do not
+know if others are already aware of the bubble. They have to decide when
+to sell the asset knowing that such a move is protable only if enough spec-
+ulators have also decided to sell. Their experimental investigation and ours
+share two common features. First, the potential payos are exogenously
+xed, that is, there is a predetermined price path. Second, there is a lack
+of common knowledge over a fundamental variable of the environment. In
+Brunnermeier and Morgan (2010), the existence of a bubble is not common
+knowledge. In our setting, the existence of the bubble is common knowl-
+edge but traders' position in the market sequence is not. There are several
+dierences between our approach and theirs. A rst dierence is the time di-
+mension. The theoretical results tested by Brunnermeier and Morgan (2010)
+depend on the existence of an innite time horizon. They implement this
+feature in the laboratory by randomly determining the end of the session.
+By contrast, we design an economic setting in which there could be bubbles
+in nite time with nite trading opportunities, even if traders act rationally.
+A second dierence is that our experimental design also enables the study of
+irrational bubbles. A third dierence is that we account for the formation of
+rational and irrational bubbles by showing that bounded rationality models
+can explain observed behavior.
+3 The bubble game
+This section proposes a simple experimental design in which bubbles may or
+may not be ruled out by backward induction. This design features a sequen-
+tial market for an asset whose fundamental value is commonly known to be
+0. There are three traders in the market.15Trading proceeds sequentially.
+15We could have designed an experiment with only two traders per market. However,
+this would have required higher payments for bubbles to be rational. Indeed, the condi-
+6Each trader is assigned a position in the market sequence and can be rst,
+second or third with the same probability1
+3. Traders are not told their posi-
+tion in the market sequence but can infer some information when observing
+the price at which they are oered to buy.
+Prices are exogenously given and are powers of 10.16For simplicity, we
+do not include the issuer of the asset in the present experimental design.
+The rst trader is oered to buy at a price P1= 10n. The power nfollows
+a geometric distribution of parameter1
+2, that is P(n=j) =1
+2j+1, withj2
+N. The geometric distribution is useful from an experimental point of view
+because it is simple to explain and implies that the conditional probability
+to be last in the market sequence is equal to 0 if the proposed price is 1 or
+10, and is equal to4
+7otherwise.17If a trader decides to buy the asset at price
+Pt, he proposes the asset to the next trader at a price Pt+1= 10Pt.
+In order to prevent participants from discovering their position in the
+market sequence by hearing other subjects making choices or by measuring
+the time elapsed since the beginning of the game, subjects play simultane-
+ously. Once P1has been randomly determined, the rst, second and third
+traders are simultaneously oered prices of P1,P2, andP3, respectively.18If
+they decide to buy, they automatically try and resell the asset.
+Each trader is endowed with 1 unit of capital. Additional capital may be
+required in order to buy the asset at price Pt>1. This additional capital
+(that is,Pt 1) is provided by an outside nancier. The experimenter plays
+the role of the outside nancier for all players. Payos are divided between
+the trader and the nancier in proportion of the capital initially invested: a
+fraction1
+Ptfor the trader, and a fractionPt 1
+Ptfor the nancier. Consider a
+trader who decides to buy the asset at price Pt. When he is unable to resell,
+his nal wealth is 0 which corresponds to the fundamental value of the asset.
+The outside nancier also ends up with 0. When the trader is able to resell
+the asset, he gets1
+Ptpercent of the proceed Pt+1= 10Ptand thus ends up
+tional probability to be last would be higher. We could also have chosen to include more
+than three traders per market. We decided not to do so in order to have a suciently high
+number of observations at the dierent price levels.
+16We have chosen prices to be powers of 10 in order for the prot in case of a successful
+speculation to compensate for the loss incurred in case of a failed speculation. If there
+were more traders in the market sequence, the probability to be last would decrease and
+price explosiveness could be lower.
+17The probabilities to be rst, second or third conditional on each price, which are
+computed using Bayes' rule, are given to the participants in the Instructions.
+18This experimental procedure corresponds to the strategy method. When a trader does
+not accept to buy the asset, subsequent traders end up with their initial wealth whatever
+their decision. The advantage of this method is that we can observe traders' speculation
+decision even if a bubble does not actually develop.
+7with a nal wealth of 10. The outside nancier ends up with 10 Pt 10.19
+The separation of payos between traders and outside nanciers allows
+implementing limited liability in the experiment: the maximum potential
+loss of a trader is 1. The potentially innite gains and losses are incurred
+by nanciers. However, nancing all the traders and also playing the role of
+the issuer, the experimenter faces a maximum total payment, per cohort of 3
+subjects, of 20. This maximum payment occurs when all subjects decide to
+enter the bubble. The experimenter is thus not subject to bankruptcy risk.
+The timing of the bubble game is depicted in Figure 1.20Speculating is
+protable for trader jif the following individual rationality (IRj) condition
+is satised:
+[1 P(last)]P(next trader buys) Uj(10)
++f[1 P(last)]P(next trader doesn't buy) + P(last)gUj(0)Uj(1) ,
+where P(last) is the probability that the trader is last in the market sequence
+conditional on the price he is being proposed, and Uj(:) is his utility function.
+In order to study how traders' rationality inuences speculation, we in-
+troduce a cap K= 10kon the rst price, with k2N. With three traders
+only, the cap Kon the rst price translates into a cap of 10k+2= 100Kon
+the highest potential price in the bubble game. The Bayesian Nash equi-
+librium is as follows. If Kis nite, upon being proposed a price of 100 K,
+an agent understands that he is last in the market sequence. Consequently,
+his individual rationality condition cannot be satised and he refuses to buy.
+Anticipating this refusal, agents who are proposed lower prices also refuse
+to buy, even if they are not sure to be last in the market sequence. At the
+Bayesian Nash equilibrium, a bubble never forms, being ruled out by back-
+ward induction.21This establishes a connexion between the bubble game
+and the previous experiments initiated by Smith et al. (1988) that focus on
+irrational bubbles.
+19When traders are self-nanced, payos' absolute values are scaled up by Pt. Intro-
+ducing traders' limited liability and outside nanciers undoes this scaling. This change
+has some relevance from a practical point of view because most traders do have limited
+liability and invest other people's money. This change can also have some consequences
+for behavior in our experiment (as well as in practice): the stakes being smaller than when
+they are self-nanced, traders might have more incentive to enter into bubbles.
+20This timing does not correspond to the extensive form of the game. Indeed, it leaves
+aside the issue of which player is rst, second, or third. The extensive-form game is
+provided in Appendix A for the two-trader case. When there is no cap on the rst price,
+it includes an innite number of nodes.
+21With a cap on prices, everyone not buying is in fact the unique rationalizable strategy
+prole.
+8? ? ? Figure 1: Timing of the bubble game.
+The bubble game features a sequential market in which traders are protected by limited
+liability and nanced by outside nanciers. Question marks emphasize the fact that traders
+are equally likely to be rst, second or third, and to be oered to buy at prices P1,P2, or
+P3, respectively. This gure displays traders' payo only. In case of successful speculation,
+traders' payo is 10 because prices are powers of 10 and traders invest one unit of capital.
+Appendix A provides the extensive-form game for the two-trader case.
+The bubble game complements this previous literature because we can
+varyKto study how the number of iterated steps of reasoning needed to
+reach the Nash equilibrium inuences speculation. When the proposed price
+isP= 100K, an agent knows that he is last and no iterated step of reasoning
+is needed. When the proposed price is P= 10K, a subject knows that he is
+not rst in the market sequence (he can be second or third). At equilibrium,
+he has to anticipate that the next trader in the market sequence (if any)
+would not accept to buy the asset. One step of iterated reasoning is thus
+needed to derive the equilibrium strategy. More generally, when the proposed
+price is 1P100K, the required number of iterated steps of reasoning
+islog10 100K
+P
+. In order to study whether this required number of iterated
+steps of reasoning aects bubble formation, we have chosen to experimentally
+study treatments in which Kequals 1, 100, and 10,000.
+Another interesting aspect of our design is that we can let Kgo to in-
+nity. A bubble can arise at equilibrium if the (IRj) condition is satised
+for all traders on the market. It is straightforward to show that, if traders
+anticipate that other traders speculate, there indeed exists increasing and
+concave utility functions Uj(:) for which this (IRj) condition holds. The
+bubble game thus oers an economic environment in which rational bubbles
+can form despite the number of trades being nite and the existence of the
+bubble being common knowledge. Hence our paper contributes to the litera-
+ture on rational bubbles by showing that neither innite trading horizon (see
+Blanchard (1979) and Tirole (1982)) nor innite trading speed (see Allen and
+9Gorton (1993) and Abreu and Brunnermeier (2003)) are necessary for com-
+mon knowledge rational bubbles to exist.22The possibility of equilibrium
+bubbles in our setting arises because no trader is ever sure to be last in the
+market sequence.23
+In order to show that the bubble equilibrium is meaningful, we now check
+whether nanciers are willing to fuel the bubble. It is clear that, if the same
+nancier provides capital to all traders (as it is the case in the experiment),
+his total expected prot would be negative. However, we show below that,
+if each trader has a dierent outside nancier, these nanciers may have
+an interest in providing capital to traders. Assuming that a nancier has a
+utility function denoted by Uf(:) and an initial wealth denoted by W, his
+individual rationality condition (IRf) is written as:
+[1 P(last)] P(next trader buys) Uf(W+ 10Pt 10)
++f[1 P(last)]P(next trader doesn't buy) + P(last)g
+Uf(W Pt+ 1)Uf(W) ,
+for allPt. It is again straightforward to show that, if nanciers expect
+that all traders speculate, there exist functions Uf(:) for which the (IRf)
+condition holds.
+The experimental protocol is as follows. Our baseline experiment in-
+cludes a total of 234 subjects. Subjects are junior and senior undergraduates
+in Business Administration at the University of Toulouse. Each subject par-
+ticipates in only one session and receives a 5-euro show-up fee. Each session
+includes only one replication of the trading game. Subjects' risk aversion is
+measured thanks to a procedure inspired from Holt and Laury (2002). We
+adjust their questionnaire to match the set of potential decisions subjects
+actually face in our experiment. This enables us to measure risk aversion
+in a context that is in line with the experimental set up as far as payos
+and probabilities are concerned.24The minimum, median, maximum, and
+average gains in the experiment are respectively 0, 1, 10, and 3.35 euros (not
+22In the previous models, two dimensions of innity were required for bubbles to emerge
+at equilibrium: innite trading opportunities and potentially innite prices. We show that
+only this last dimension of innity is necessary for common knowledge rational bubbles to
+arise at equilibrium.
+23It is straightforward to show that a no-bubble equilibrium always exists. The Supple-
+mentary Appendix proves the existence of a bubble equilibrium for the risk neutral and
+constant relative risk aversion cases. It also oers a more extensive theoretical analysis of
+the bubble game including a welfare analysis.
+24The questionnaire is composed by a table with 14 decisions. For each decision i,
+subjects may choose between the riskless option A, which is to receive 1 euro for sure,
+or the risky option B, which is to receive 10 euros with probabilityi
+14, or 0 euro with
+probability14 i
+14. This questionnaire features what Harrison, List and Towe (2007) refer
+10including the show-up fee). The instructions for the case where K= 10;000
+are in Appendix B.
+Our experimental protocol is summarized in Table I.
+Session # Subjects cap on initial price, K Bayesian Nash Equilibrium
+1, 5, and 9 60 1 no-bubble
+2, 6, and 10 54 100 no-bubble
+3, 7, and 11 63 10,000 no-bubble
+4, 8, and 12 57 +1 no-bubble or bubble
+Table 1: Experimental protocol.
+4 Behavioral game theory predictions
+This section analyzes the game with various behavioral game theory models.
+The next section structurally estimates these models using data from the
+bubble game. Two types of models appear relevant in our context: the Sub-
+jective Quantal Response Equilibrium (hereafter SQRE) of Rogers, Palfrey,
+and Camerer (2009), and the Analogy-Based Expectation Equilibrium (here-
+after ABEE) of Jehiel (2005). On the one hand, the SQRE is of interest here
+since i) it is based on the concept of noisy best-response that proved useful to
+explain failures of backward induction in previous experiments (see Camerer
+(2003)), and ii) it allows for heterogeneity in agents' rationality that could be
+an important driver of bubble formation. On the other hand, the ABEE is
+relevant here because i) speculation heavily relies on beliefs' formation that
+is at the heart of this equilibrium concept, and ii) candidates for analogy
+classes arise naturally in the bubble game.
+4.1 Subjective Quantal Response Equilibrium
+According to the SQRE logic, an agent's payo responsiveness, denoted by
+i;s, depends on his type iand on his level of sophistication, denoted by s.
+SQRE then involves a stochastic choice model whereby the agent's propensity
+to choose an action has a logistic form that depends on the expected prot
+of this action given his information, and on his payo responsiveness. The
+expected payo from buying the asset conditional on being proposed a price
+to as a higher frame: a risk-neutral agent switches to the risky option B in the upper part
+of the table. It gives us a precise estimation of the willingness to accept the bets at stake
+in the bubble game.
+11Pis denoted by ui;s(BjP). The expected payo from not buying the asset
+is denoted by u?. We adopt a specication with logistic stochastic choice
+functions so that the probability that agent ibuys the asset after being
+proposed a price Pis:Pi;s(BjP) =ei;sui;s(BjP)
+ei;sui;s(BjP)+ei;su?.
+In the SQRE logic, agent i's payo responsiveness is given by: i;s=
+i+s;where it is commonly known that iis uniformly distributed over
+the interval [ 
+2;+
+2], and where represents the sensitivity of an agent's
+payo responsiveness to his level of sophistication. The level of sophistication
+sfollows a Poisson distribution with density function f. Letdenote the
+average level of sophistication.
+Finally, in the SQRE logic, agents may not have the same understanding
+of the overall population of players. In particular, it is assumed that an
+agent with sophistication scannot imagine that other agents can have a
+sophistication greater than s . The agent's truncated beliefs about the
+fraction of h-level players is thus gs(h) =f(h)Pmax(s ;0)
+i=0f(i). The expected payo
+from buying the asset conditional on being proposed a price Pcan thus be
+written as: ui;s(BjP) = 10 [1 P(lastjP)]Pmax(s ;0)
+h=0gs(h)Pi0;h(Bj10P).25
+Overall, SQRE has ve parameters: , the basic payo responsiveness;
+, the uncertainty surrounding the basic payo responsiveness; , the av-
+erage level of sophistication; , the sensitivity of payo responsiveness to
+sophistication; and , the imagination parameter.
+One advantage of using the SQRE is that it nests various interesting be-
+havioral game theory models. In particular, when  = 0, = 0,= +1
+and= 1, the SQRE boils down to the Cognitive Hierarchy model (here-
+after CH) developed by Camerer, Ho and Chong (2004) with only one free
+parameter . The CH model states that agents best-respond to mutually
+inconsistent beliefs: they believe that all other agents' sophistication is lower
+than theirs.26Moreover, agents with a level of sophistication s= 0 choose
+25Given our experimental design, subjects play a simultaneous-move game in which
+decisions matter only if previous traders in the market sequence, if any, decide to buy
+the asset. We calculate expected payos conditional on this event in order to simplify
+equilibrium computations. An alternative specication is to compute expected payos
+ex-ante, that is, taking into account the probability that previous players, if any, decide to
+buy. We checked that, when estimated on the entire data, the quantal response equilibrium
+has a better t with our specication than with the ex-ante specication (p-value is 0.00
+with a Vuong test).
+26The level-kmodel of Stahl and Wilson (1995) and Nagel (1995) also exhibits such
+downward looking beliefs. The dierence between these models and the CH model is that
+they assume that agents believe that all other agents have a level of sophistication that
+is just below theirs. See also Costa-Gomes, Crawford, and Broseta, (2001), Costa-Gomes
+and Crawford (2006), and Crawford and Iriberri (2007) for experimental studies of the
+level-kmodel.
+12each available action with an equal probability. Alternatively, when = 0,
+= +1, and when = 0 or= 0, the SQRE corresponds to the Quan-
+tal Response Equilibrium (hereafter QRE) of Mc Kelvey and Palfrey (1995)
+with only one free parameter . The QRE takes into account the fact that
+players make mistakes but it retains beliefs' consistency. At equilibrium,
+players are responsive to payos to the extent that more protable actions
+are chosen more often. Using the SQRE enables us to study whether noisy
+best-responses with beliefs consistency or best-responses with beliefs incon-
+sistencies best explain speculation in the bubble game.
+Another advantage of the SQRE is that the QRE and CH models can be
+extended to take into account heterogeneity across agents. The CH model
+can be extended to a (discretized) Truncated Quantal Response Equilibrium
+(hereafter TQRE) by freeing the parameter . As a result, we have a CH
+model in which agents, instead of best-responding, have a payo responsive-
+ness that increases with their level of sophistication. Likewise, the QRE can
+be extended to a Heterogeneous Quantal Response Equilibrium (hereafter
+HQRE) by freeing the parameter . We then have a QRE in which agents
+do not know for sure what the exact level of payo responsiveness of another
+agent is.27Both of these extensions can prove useful to understand whether
+heterogeneity across agents plays a role for bubble formation.
+A last advantage of the SQRE is that is can be used to estimate whether
+overcondence matters for speculative bubbles. The limited imagination pa-
+rameterindeed represents the extent to which agents underestimate the
+average level of sophistication in the population of players, a phenomenon
+we refer to overcondence because it is similar in spirit to the better-than
+average eect in the psychology literature. Starting from the CH model and
+freeing the parameter , we can estimate the extent to which agents suer
+from limited imagination. We call this model the overcondence CH (here-
+after OCH). positive corresponds to a high level of overcondence because
+agents believe that all other players are less sophisticated than they are.
+Whenis negative, agents conceive that other players may be more sophis-
+ticated than them but they are still underestimating the average level of
+sophistication due to their truncated beliefs. In the limit, when converges
+to 1, there is no overcondence.
+We now apply the SQRE to the bubble game. For brevity, we focus here
+on the QRE and CH models for treatments with a nite price cap K.28
+27Uncertainty about other traders' payo responsiveness can be interpreted as uncer-
+tainty about their level of risk aversion.
+28The computations for the general specication of the SQRE as well as for the case
+in whichK= +1are available in the Supplementary Appendix. Extending the CH and
+QRE models to incorporate traders' heterogeneity as modeled in the TQRE and HQRE
+13We rst study the QRE. After being proposed a price P= 100K, a
+trader perfectly infers that he is last in the market sequence and buys with
+probability P(BjP= 100K) =1
+1+e. After observing a price P= 10K, a
+trader infers that he has a specic probability, denoted by q(K;P = 10K),
+not to be last. He correctly anticipates that the probability to buy of the
+last trader is not equal to zero. His expected payos from buying is u(BjP=
+10K) =q(K;P = 10K)1
+1+e10. His probability to buy is therefore
+P(BjP= 10K) =1
+1+e
+1 10q(K;P=10K)
+1+e. Applying this logic backward, we
+nd the predicted probability that a trader buys at all potential prices. This
+analysis shows that the QRE can predict the existence of bubbles even when
+there is a price cap.
+Consider now the CH model. When proposed a price of 100 K, a trader
+knows he is last in the sequence. Consequently, only level-0 traders buy, with
+probability1
+2. Given that there is a fraction f(0) =0e 
+0!of such traders in
+the population, the probability to observe a trader buying at this price is:
+P(BjP= 100K) =1
+2e .
+When a trader is being proposed a price P= 10K, he infers that he is
+penultimate in the sequence. If he is a level-0 trader, he buys with probability
+Ps=0(BjP= 10K) =1
+2. If he is a level- splayer with s1, he thinks that the
+next trader observing the price 100 Kis a level-hwith probability gs(h) =
+f(h)Ps 1
+i=0f(i). Consequently, his expected prot if he buys is: us1(BjP= 10K) =
+q(K;P = 10K)f(0)Ps 1
+i=0f(i)1
+210. The trader is strictly better o buying
+if and only ifPs 1
+i=0i
+i!<5q(K;P = 10K). Given thatPs 1
+i=0i
+i!is strictly
+increasing in s, there exists a (potentially innite) threshold s1 such that
+only traders with a level below or equal to sbuy. This is because higher
+level traders have a more accurate perception of the distribution of lower-level
+types. Finally, given the actual distribution of traders' types, the probability
+to observe a trader buying at a price of P= 10Kis:P(BjP= 10K) =
+1
+2e +Ps=s
+s=1 s
+s!e 
+, which is greater than P(BjP= 100K). As before, the
+rest of the model is solved backward. The CH model can thus predict the
+existence of bubbles despite the presence of a price cap.
+4.2 Analogy-Based Expectation Equilibrium
+According to the ABEE logic, agents use simplied representations of their
+environment in order to form expectations. In particular, agents are assumed
+models does not change the underlying logic. For the case in which K= +1, we derive
+predictions by relying on equilibrium conjectures that are realized at equilibrium as it is
+the case for the derivation of the Nash equilibrium.
+14to bundle nodes of the game into analogy classes.29Agents then form correct
+beliefs concerning the average behavior within each analogy class. Following
+Huck, Jehiel, and Rutter (2011), we consider that agents apply noisy best-
+responses to their beliefs.30
+In the bubble game, two types of analogy classes arise naturally. On
+the one hand, traders may use only one analogy class, assuming that other
+traders' behavior is the same across all potential prices. On the other hand,
+traders may use two analogy classes: one class (Class I) that includes prices
+at which traders are sure not to be last in the market sequence, the other
+(Class II) that includes the remaining prices (at which traders think they
+may be last or know they are last).
+We now apply the ABEE to the bubble game. For brevity, we restrict
+our attention to the case in which the price cap is K= 1 (the other cases are
+addressed in the Supplementary Appendix). Let p1,p2, andp3denote the
+actual probability that a trader buys after observing prices equal to 1, 10,
+and 100, respectively. Let P(BjP= 1),P(BjP= 10), and P(BjP= 100) be
+the corresponding probabilities as (mis)perceived by traders using analogy
+classes.
+We start by analyzing the one-class ABEE. A trader after observing a
+priceP= 100 knows he is last. Consequently, his probability to buy is
+p3=1
+1+e. A trader after observing a price P= 10 has the following ex-
+pected payo from buying: u(BjP= 10) = 10P(BjP= 100). Because
+of the use of one analogy class, we have P(BjP= 100) =p1+p2+p3
+3.31The
+probability to buy after P= 10 is therefore: p2=1
+1+e(1 10
+3(p1+p2+p3)). A
+trader after observing a price P= 1 has an expected payo of u(BjP=
+1) = 10P(BjP= 10) = 10p1+p2+p3
+3. The probability to buy is therefore:
+p1=p2. This analysis leaves us with a system of equations that can be solved
+numerically to nd p1,p2, andp3.
+We now turn to the two-class ABEE. As before, a trader after observing
+a priceP= 100 buys with a probability p3=1
+1+e. A trader after observing
+a priceP= 10 has the following expected payo from buying: u(BjP=
+29Consistent with Jehiel (2005) when he studies endogenous analogy grouping (in page
+100), we consider that an agent's bundling includes his own nodes.
+30The ABEE concept with stochastic choice remains dierent from the QRE given that,
+in the ABEE logic, agents have inaccurate expectations regarding other players' behavior.
+One can thus test whether this inaccuracy helps explaining the data.
+31The probability1
+3corresponds to the ex-ante probability of observing prices of 1, 10 or
+100. Given our experimental design in which all agents have to pick an action irrespective
+of whether previous players have decided to buy or not, using this ex-ante probability is
+in line with the spirit of ABEE. If we had chosen an experimental design corresponding to
+the extensive representation of the game, we would have P(BjP= 100) =p1+p1p2+p1p2p3
+1+p1+p1p2.
+1510) = 10P(BjP= 100). Because Class II is a singleton, we have P(BjP=
+100) =p3. Thus, we have p2=1
+1+e(1 10p3). A trader after observing a price
+P= 1 uses Class I to form his expectations and thus has an expected payo
+ofu(BjP= 1) = 10P(BjP= 10) = 10p1+p2
+2. The probability to buy is
+therefore:p1=1
+1+e(1 5(p1+p2)). The system of equations can again be solved
+numerically.
+Overall, one can show that the ABEE can predict the presence of a bubble
+even when there is a price cap. A bubble can also arise at equilibrium in
+the ABEE logic even if agents best-respond to their beliefs, that is, even if
+ = +1.32
+4.3 Implications of the behavioral game theory models
+for speculative bubbles
+We use the derivations provided in the previous subsections in order to high-
+light the implications for speculative bubbles of the various behavioral game
+theory models we consider. For simplicity, we focus on the case in which
+K= 1 and on the speculative behavior after observing P= 10 andP= 100,
+the last two consecutive prices.
+The QRE predicts that the probability to buy is P(BjP= 10) =
+1 +e
+1 10
+1+e 1
+after observing P= 10, and P(BjP= 100) =
+1 +e 1after observing
+P= 100. The propensity to speculate when P= 100 is pretty low because
+traders can only loose when buying the asset. It is higher when P= 10
+because there is a chance that the next trader will buy. This higher chance
+of reselling induces a higher propensity to speculate.33The snowball eect in
+the QRE model is thus due to the fact that the initial noise due to stochastic
+choice is amplied when stepping back away from the maximum price. The
+QRE predicts a snowball eect when K= +1.
+The CH model predicts that P(BjP= 10) =1
+2e +Ps=s
+s=1 s
+s!e 
+and
+thatP(BjP= 100) =1
+2e .sis the highest level of sophistication ssuch
+32For example, one can check that the following strategy prole is an ABEE with one
+analogy class: traders buy after observing prices of 1 and 10 and do not buy after observing
+a price of 100. With two analogy classes, the following prole is an ABEE: traders buy
+after observing a price of 1 and do not buy after observing prices of 10 and 100.
+33It is not always true that, in the QRE, P 
+BjP= 10i
+>P 
+BjP= 10i+1
+. Con-
+sider, for example, the general case with a cap Kin which the probability that trader
+iis not to be last after observing P= 10iis denoted by q(K;P = 10i). We have
+P 
+BjP= 10i
+=h
+1 +e(1 10q(K;P=10i)P(BjP=10i+1))i 1
+. Ifq(K;P = 10i) is low enough
+compared to q(K;P = 10i+ 1), it is possible that P 
+BjP= 10i
+<P 
+BjP= 10i+1
+.
+16that the inequalityPs 1
+i=0i
+i!<5 is satised. This inequality indicates that
+an agent with sophistication sis better o speculating. The propensity to
+speculate when P= 100 is pretty low because only step-0 players buy with
+probability1
+2. It is higher when P= 10 because some agents with higher
+levels of sophistication also decide to speculate. The snowball eect in the
+CH model is thus due to an increase in the willingness to speculate of more
+sophisticated agents. Contrary to the QRE, for K= +1, the CH model does
+not predict a snowball eect. Indeed, all traders have the same propensity
+to buy for all prices: traders with s > 0 always speculate while traders
+withs= 0 speculate with probability1
+2. Our experiment thus constitutes a
+stringent test for the CH model.
+To understand the implications of ABEE for the bubble game, we focus
+on the one-class ABEE. This model predicts that a trader speculates with
+probability p2=
+1 +e
+1 10
+3h
+(1+e) 1+2p2i 1
+after observing P= 10, and
+p3=1
+1+eafter observing P= 100 (p1, the probability to buy after observing
+P= 1, is equal to p2). For example, for  = 1, numerical computations yield
+p1=p2= 0:999 andp3= 0:269. Because of analogy-based expectations,
+the trader who observes P= 10 believes that the probability that the next
+trader buys isp1+p2+p3
+3instead ofp3. In the case we consider, such erroneous
+beliefs induces him to overestimate the probability that the next trader buys
+which increases his propensity to speculate.34This reinforces the snowball
+eect above what would be predicted by the QRE, even in the case in which
+K= +1.
+5 Empirical Results
+5.1 The determinants of speculation in the bubble game
+We study individual decisions to buy the overvalued asset. Figure 2 plots,
+for each treatment, the proportion of buy decisions for each price level. The
+number of times a given price has been proposed is indicated at the bottom
+of the bar. Below the horizontal axis, we explicitly indicate, for each price,
+the number of steps of reasoning required to reach equilibrium as well as the
+conditional probability not to be last.
+34It is not always the case that, in ABEE, traders overestimate the likelihood that
+the next trader speculates. Consider, for example, the two-class ABEE with K= 100.
+The trader observing P= 10 anticipates that the next trader is in Class II and that his
+probability to buy isp3+p4+p5
+3. Ifp3> p4andp3> p5, then the actual probability that
+the next trader buys p3is higher than the expected probabilityp3+p4+p5
+3.
+17Figure 2: Data and predictions from behavioral game theory models.
+Experimental data on the probability of a Buy decision, depending on the initial price, the
+probability not to be last and the number of steps of iterated reasoning. Predictions from
+behavioral game theory models use the parameters of interest estimated on the entire data
+set.
+Let's rst focus on the treatments with a cap on the rst price. The
+rather high probabilities to buy in these treatments (Figure 2, Panels A, B
+and C) are inconsistent with Nash equilibrium. Keeping the probability not
+to be last constant, it seems that traders are more likely to buy when more
+steps of reasoning are required (for example, compare the proportion of buy
+decisions when traders are sure not to be last in Figure 2, Panels A, B, and
+C). This is in line with previous experimental results on the centipede game.
+35
+Also, keeping the number of steps of reasoning constant, it seems that
+traders are more likely to buy when their probability not to be last increases
+(for example, compare the proportion of buy decisions for 3 and 4 steps
+of reasoning in Figure 2, Panel B and C). This is a new empirical result
+that could not meaningfully be obtained in the centipede game because the
+probability not to be last is equal to 1 for each node except the last one at
+which it is 0. This result indicates that there is some elements of rationality
+35When the price proposed to subjects is 1, the propensity to buy is very high (100% of
+subjects choose to buy when the price cap is greater than 1). This propensity to deviate
+from the Nash equilibrium strategy is in line with the results reported by Mc Kelvey and
+Palfrey (1992) on the six-move centipede game regarding the very low proportion of games
+that end up in the rst node. A high propensity to buy when being proposed a price of 1
+is also observed in the robustness experiments discussed in the Supplemental Appendix.
+18in subjects' decisions.
+These results uncover a snowball eect: when there is a price cap, the
+propensity to enter bubbles seem to increase with the required number of
+reasoning steps and with the probability not to be last.
+We now turn to the treatment in which there is no cap on the rst price
+(Figure 2, Panel D), that is, K= +1. First, subjects who are sure not to
+be last always buy the asset which indicates a higher propensity to speculate
+than when there is a price cap (for example, compare the proportion of buy
+decisions when traders are sure not to be last in Figure 2, Panels D, and C).
+A Wilcoxon rank sum test indicates that the proportion of buy decision when
+subjects are oered a price of 1 or 10 is signicantly higher when K= +1
+(100%) than when there is one (77%) (the p-value is 0.034).36This is in
+line with the fact that bubbles are rational when K= +1.
+Second, focusing exclusively on data from K= +1, the probability to
+buy appears to be statistically higher when subjects are sure not to be last
+(100%) than when they can be last (54%) (the p-value is 0.001 according to
+a Wilcoxon rank sum test). There is thus a snowball eect in the treatment
+withK= +1. This is in contrast with the prediction of the CH model.
+Third, when there is no cap and when prices are 100 or above, if partici-
+pants coordinate on the same equilibrium, their decisions should be the same
+for all price levels. In line with this hypothesis, using a Wilcoxon rank sum
+test, we cannot reject the fact that the probability to buy is the same after
+observing prices of 100, 1,000, and 10,000 (57%), and after observing higher
+prices (46%) with a p-value of 0.52 (this test keeps the required number of
+steps constant and equal to innity).
+These three results on the treatment with no cap cannot be obtained in
+an experiment with the centipede game, and underline the interest of our
+design for the study of speculation.
+In order to ne-tune our statistical analysis, we run a logit regression.37
+The propensity to buy the overvalued asset is explained by several variables.
+As can be seen in Table II, Variables 1 through 4 are constructed by inter-
+acting variables that measure the number of steps of reasoning required to
+reach equilibrium and the probability to be last. For example, Variable 1 is
+the interaction between a dummy that indicates that the number of steps of
+reasoning is 1 or 2 and a dummy that indicates that the probability to be last
+is strictly included between 0 and 1. Variables 5 through 7 are constructed
+36This result however does not hold if we compare the cases K= +1(100%) and
+K= 10;000 (92%) (the p-value is 0.261). Besides, there is no dierence in the probability
+to buy when a subject has a probability not to be last equal to3
+7or1
+2between the cases
+K= +1(54%) and K= 10;000 (64%) (the p-value is 0.367).
+37The results are the same if we run a probit regression.
+19as the previous variables but also include an interaction with the level of the
+price cap. The last two variables are the individual degree of risk aversion
+and the oered price.38The constant reects the propensity to speculate
+of subjects who are proposed to buy at the maximum price (100 K), if any.
+This is useful because, since these subjects are expected not to buy, their
+probability to buy can be viewed as the incompressible level of noise in our
+data.39
+The results are in Table II. We rst focus on the subjects who know they
+are last in the market sequence. We can reject the hypothesis that these
+subjects never enter the bubble. Out of the 29 subjects who knew they were
+last, three bought the asset. This number is low but it is not zero. This result
+is in line with the ndings of Lei, Noussair and Plott (2001) that subjects were
+buying an overvalued asset even when prohibited to resell. In our framework,
+these agents correspond to \step 0" subjects. Lei et al. (2001) report in page
+853 that 6 out of 36 subjects made at least one dominated transaction.40
+This proportion (16.7%) is slightly higher than our proportion of dominated
+choices (10.3%), maybe reecting the more complicated framework used in
+their experiment. We now complement their results by studying the behavior
+of subjects who are further away from the maximum price and who have more
+chances not to be last.
+The regression analysis provides other interesting results. First, the coef-
+cients of Variables 1 through 4 are signicantly positive at the one percent
+level. This indicates that subjects who know they are last buy signicantly
+38The coecient of risk aversion is computed assuming a constant relative risk aversion
+utility function as in Holt and Laury (2002).
+39The indicators that the required number of steps is 1 or 2, that it is 3 or more, that the
+probability not to be last is strictly included between 0 and 1, and that is 0 are not included
+in our regressors because these variables are collinear with the interaction variables that
+we include. For example, by denition of step 0, the sum of variables 1 and 2 is equal to
+the indicator that the required number of steps is 1 or 2. Also, given that all the subjects
+who were sure not to be last decided to buy in the no cap treatment, we do not introduce
+in our regressors the indicator that a subject has an innite number of required steps of
+reasoning. Finally, Variables 5, 6, and 7 enable us to test whether the level of the cap
+has an eect on the propensity to speculate over and above the number of required steps
+of reasoning and the probability to be last. We cannot include more interaction variables
+with the level of the cap because these interaction variables would have no variability. For
+example, interacting Variable 1 with the no cap indicator would generate a variable that
+always equals 0.
+40We focus here on the experiment of Lei, Noussair and Plott (2001) during which
+subjects could participate in several markets, the so-called TwoMarket/NoSpec treatment.
+This is because, in this treatment, subjects could participate actively in the experiment
+without being forced to participate in the bubble. This provides a lower bound for the
+number of subjects who make mistakes in the market.
+20 
+Coefficient p-value
+Constant  -1.84 0.005
+1 : I Step=1 or 2  x I0<P(last)<1 1.80 0.013
+2: I Step=1 or 2  x IP(last)=0 2.60 0.000
+3: I Step>=3  x I0<P(last)<1 2.82 0.000
+4: I Step>=3  x IP(last)=0 5.65 0.000
+5 :I Step=1 or 2  x I0<P(last)<1  x I cap=10,000 0.57 0.464
+6: I Step>=3  x I0<P(last)<1  x Ino cap  -0.32 0.556
+7: I Step>=3  x IP(last)=0  x Icap=10,000  -0.96 0.443
+Degree of risk aversion for consistent choices  - 0.62 0.249
+Price  -0.00 0.451
+Log likelihood  -116.22
+Number of observations 234Table 2: Logit Regression of the Purchase Decision.
+Ixis an indicator variable that takes the value 1 if condition xis true. The variable Step
+represents the number of steps of reasoning needed to rule out bubbles. The variable P(last)
+is the probability to be last in the market sequence.
+less than the others. Second, a Wald test indicates that the dierence be-
+tween the coecients of Variables 1 and 3 is statistically signicant with a
+p-value of 0.07. Moreover, the dierence between the coecients of Vari-
+ables 2 and 4 is statistically signicant with a p-value smaller than 0.01.
+Keeping constant the probability to be last, subjects are thus more likely
+to buy when there are 3 or more steps than when there are 1 or 2 steps of
+reasoning. Third, the dierence between the coecients of Variables 1 and
+2 is marginally signicant with a p-value of 0.11, and the dierence between
+the coecients of Variables 3 and 4 is statistically signicant with a p-value
+of 0.01. Keeping constant the required number of reasoning steps, subjects
+are more likely to buy when they are less likely to be last. Finally, we nd
+no additional eect on the cap, the coecients of Variables 5 through 7 be-
+ing insignicant: univariate dierences exhibited in Figure 2 are thus well
+captured by our Variables 1 to 4.
+These results statistically establish the presence of the snowball eect: the
+propensity to enter bubbles increases with the required number of reasoning
+steps and with the probability not to be last. This snowball eect is not
+present at the Bayesian Nash equilibrium (whether there is a cap or not) but
+it can be displayed by the behavioral game theory models discussed in the
+previous section. The next subsection proposes a structural estimation of
+these models in order to better understand the nature of speculation in the
+bubble game.
+215.2 Estimating behavioral game theory models of spec-
+ulation
+Our results so far suggest that some players have bounded rationality and
+that the formation of bubbles is related to a snowball eect. To account for
+these phenomena, we estimate models that explicitly incorporate bounded
+rationality: the Subjective Quantal Response Equilibrium of Rogers, Palfrey,
+and Camerer (2009), and the Analogy-Based Expectation Equilibrium of Je-
+hiel (2005). For each model, we estimate the parameters of interest using
+maximum likelihood methods for the entire data set as well as for each treat-
+ment separately.41Condence intervals are computed using a bootstrapping
+procedure: using the empirical distribution of the observed data, we resam-
+ple 10,000 data sets on which the parameters of interest are re-estimated.
+We then choose the 2.5 and 97.5 percentile points values to construct 95%
+condence intervals. When comparing the ts of two models, we use a like-
+lihood ratio test when the models are nested, and Vuong (1989)'s test when
+they are not.42
+Table III reports our estimation results, and Figure 3 displays the sta-
+tistical tests for various models' comparisons. The rst two lines of Table
+III describe our data, namely, the number of observations, and the observed
+average probability to buy. The next two lines show the predictions and log-
+likelihoods of the Nash equilibrium under risk neutrality.43The mean choices
+are generally far away from the Nash equilibrium; the observed probability
+to buy is too low when there exists a bubble-equilibrium, and too high when
+it does not exist.
+Table III then provides the predictions and log-likelihoods of the various
+SQRE and ABEE models including the Cognitive Hierarchy model and its
+extension, the Truncated Quantal Response Equilibrium, and the Quantal
+Response equilibrium and its extensions, the Heterogeneous QRE (hereafter
+HQRE) and the one- and two-classes ABEE. For brevity, the estimation of
+the Overcondence Cognitive Hierarchy model is given in the Supplementary
+41For simplicity, when estimating TQRE and SQRE models, we set = 1 as in the CH
+model.
+42Under the null hypothesis, the probability distribution of the log-likelihood ratio statis-
+tic used to test nested models is approximated by a Chi-squared distribution with degrees
+of freedom equal to the dierence between the numbers of parameters in the two models,
+while the probability distribution of the Vuong's statistic used to test non-nested models
+is a standard normal distribution.
+43We consider that traders coordinate on the bubble equilibrium when there is no cap
+on the initial price. The no-bubble Nash equilibrium has a lower log-likelihood. In order
+to compute the likelihoods, we assume that players choose non-equilibrium strategies with
+a probability of 0.0001.
+22Table 3: Estimations and goodness of t of behavioral game theory models.
+23Appendix.
+The results are as follows. The average level of sophistication of the
+CH, estimated on the entire data set, is 0.5. This is in line with the median
+estimates reported by Camerer, Ho and Chong (2004) that lie between 0.7
+and 1.9, but is a little low. This low estimated suggests a high proportion
+of level-0 players, around 60%. Interestingly, what drives this result is not
+really the fact that traders enter too much into bubbles when they should not.
+Indeed the fact that there is only around 10% of subjects who buy when they
+know they are last in the market sequence suggests a proportion of level-0
+players equal to 20%. What explains the high estimated proportion of level-0
+players is rather the fact that subjects do not buy as much as expected by the
+cognitive hierarchy model (with a higher average sophistication level) when
+there is no cap on the initial price or when the cap is large. This can be
+seen on Figure 2 that plots the predictions of the CH model using the best-
+tting value of estimated on the entire data set. CH embeds the better
+than average eect to the extent that traders believe that no other agent
+does as many steps of reasoning as them. Our estimations of OCH (reported
+in the Supplementary Appendix) show that, when the parameter can be
+identied, we cannot reject the hypothesis that = 1, its CH restriction.
+Overcondence is thus an important feature that enables the CH logic to t
+our data pretty well.
+The payo responsiveness  of the QRE, estimated on the entire data set,
+is 0.3. This is consistent with the results of Mc Kelvey and Palfrey (1995)
+who report estimates between 0.15 and 3.3. As was also the case for the CH
+model, such a low value of the responsiveness parameter is required not so
+much to explain why subjects buy when they should not (that is, when the
+oered prices are close to the price cap, if any) but to explain why they do
+not buy that much when they should (that is, when the oered prices are
+low).
+As shown in Figure 3 that displays the statistical tests for various models'
+comparisons, the QRE ts our data better than the CH model (p-value=0.01
+for the overall data). This result is interesting because Camerer, Ho and
+Chong (2004) show that CH ts better than QRE for a wide variety of games.
+This suggests that there is a specic aspect to the nature of speculation in
+the bubble game. Moreover, this result is also at odd with those of Kawagoe
+and Takizawa (2010), who compare the goodness of t of both models in
+laboratory experiments of the centipede game. In order to understand why
+QRE ts better than CH in the bubble game, it is interesting to focus on
+the treatment with K= 1. Indeed, this treatment corresponds to a specic
+centipede game with three agents playing once. In this treatment, CH ap-
+pears to t better than QRE (p-value=0.046). The other treatments with
+24 
+ 
+ 
+ 
+p=0. 00 p=0. 00 p=0. 03 
+p=0. 00 
+Free  
+p=0.01 p=0.00 
+p=0.00  p=0.00  →∞  →∞  →∞
+1 ==0 
+=0 =0 
+→∞  HQRE  TQRE  
+OCH SQRE  
+CH QRE 
+Nash  ABEE 2 classes  p=0.0 2 p=0.07 
+p=0. 01 
+p=0.0 0 
+p=0.12 ABEE 1 class  p=0.0 7 Figure 3: Goodness of t comparisons.
+Statistical tests for various models' comparisons using parameters estimated across all treat-
+ments. The arrows point towards the best model. Plain and dotted lines indicate, respec-
+tively, signicant and insignicant dierences in likelihood at the 1% condence level.
+K > 1 are not centipede games because some agents do not know what their
+position is. In this case, the information revealed by prices enable traders
+to better infer their chances not to be last and aect their expected payos.
+For these treatments, QRE ts better than CH most of the time (p-values
+are 0.491, 0.064, and 0.000 for Kequals 100, 10,000, and + 1, respectively).
+Given that the informativeness of prices is a relevant feature from an empir-
+ical point of view, this result demonstrates again the interest of our design
+in better understanding the nature of speculation.
+Looking at Figure 2, it appears that QRE better captures the fact that
+the probability to buy when the price is higher than 100 is lower than the
+one when the price is 1 or 10. In the QRE, since costlier mistakes are less
+likely, this model is able to capture the drop in players' expected utility from
+buying: when they are proposed a price P100, the conditional probability
+to be third is greater than or equal to1
+2, whereas, when they are proposed
+a price of 1 or 10, the conditional probability to be third is zero. This
+informational feature is present in our design but not in the centipede game,
+and has behavioral consequences in the bubble game.
+The most striking dierence between the t of CH and QRE arises in the
+treatment with K= +1. Indeed, in this case, as explained in the theory
+section and as can be seen in Figure 2, the CH model does not capture the
+snowball eect while QRE does account for it.
+We then estimate generalizations of the CH and QRE models. First, as
+Figure 3 indicates, TQRE and HQRE improve on CH and QRE models,
+respectively. This suggests that taking into account heterogeneity in payo
+25responsiveness enables the models to better t data from the bubble game.
+Second, the fact that HQRE better ts the data than TQRE conrms that
+cognitive hierarchies are not necessary to explain speculative behavior in the
+bubble game. This result is further conrmed by the SQRE estimations. On
+the one hand, as shown in Table 3, the CH parameter is strictly positive in
+only two treatments (those with K= 1 andK= +1) and is rather small. In
+the two other treatments, we estimate that = 0, so the SQRE model boils
+down to the HQRE. On the other hand, even in the former cases, a Vuong
+test indicates that the dierence between the ts of the HQRE and of the
+SQRE models is not signicant. Figure 3 also shows that, when these models
+are estimated on the overall data, the likelihood ratio test favors the HQRE
+over the SQRE. These results conrm the fact that cognitive hierarchies are
+not crucial to understand speculation in the bubble game. We thus conclude
+that the nature of speculation in the bubble game is related to less than
+perfect payo responsiveness.
+We nally estimate the ABEE models that assume traders form expec-
+tations within analogy classes. We nd that the two-class ABEE ts the
+bubble game data better than the one-class ABEE. Figure 3 indicates that a
+Vuong test favors the two-class ABEE model with a p-value of 7%. This sug-
+gests that informational aspects related to the inference on the probability
+not to be last are important for speculation in our game. When estimated
+on the entire data, the t of the two-class ABEE appears lower than the one
+of the QRE and of the HQRE.44However, when excluding the treatment in
+whichK= 1 that corresponds to a centipede game, the t of the two-class
+ABEE is not signicantly dierent at 5% than the one of the QRE and of
+the HQRE. Furthermore, focusing on individual treatments, the t of the
+two-class ABEE is never signicantly dierent even at 10% than the one of
+QRE. Compared to HQRE, it is signicantly better at 1% for K= +1and
+not signicantly dierent at 5% for the other three treatments. This suggests
+that analogy classes play an important role in understanding speculation as
+hypothesized by Bianchi and Jehiel (2011).
+The ABEE models appear better in terms of estimates' stability. Indeed,
+for the SQRE model and its various specications, the parameters of inter-
+est, estimated separately for each treatment, display some variability: point
+estimates in Table III often vary by an order of magnitude.45For example,
+44The Supplementary Appendix reports estimations of an heterogeneous ABEE model
+referred to as HABEE. Allowing for heterogeneity in payo responsiveness in the ABEE
+model increases the log-likelihood but this increase is not signicant.
+45Such parameter estimates' variability is not unusual in structural estimations of game
+theory models. For example, in his Table 3, Weizs acker (2003) reports estimates of average
+payo responsiveness that lie between 1.75 and 11.33 for player j. As indicated above,
+26the estimates of  vary from 0.1 to 2.7 in the QRE model and from 0.4 to 2.3
+in the HQRE model. On the contrary, the estimates from the ABEE models
+appear quite stable across treatments.
+Our result that speculation in the bubble game appears to be related
+to quantal responses and analogy classes echoes the ndings of Carrillo and
+Palfrey (2009, 2011) and Camerer, Nunnari, and Palfrey (2012) on other
+Bayesian games. Carrillo and Palfrey (2009) create and study the com-
+promise game in which two players have to choose between ghting and
+compromising. A player's payo from ghting exceeds his payo from com-
+promising only if his strength, which is private information, is larger than his
+opponent's one. The beauty of the compromise game is that, for any distri-
+bution of strengths, it admits a unique Bayesian Nash equilibrium whereby
+players always ght. Carrillo and Palfrey (2009) show that a mix between
+the cursed equilibrium of Eyster and Rabin (2005) and the quantal response
+equilibrium best ts behavior in the compromise game.46Carrillo and Pal-
+frey (2011) and Camerer, Nunnari, and Palfrey (2012) further nd that this
+cursed quantal response equilibrium also t quite well data from experiments
+with private information on bilateral trading games and auctions, respec-
+tively. Coarse thinking, that is an ingredient of both the cursed equilibrium
+and the analogy-based expectation equilibrium, thus appears to be relevant
+to understand strategic behavior in Bayesian games.
+6 Conclusion
+This paper proposes a novel experimental design to study speculative behav-
+ior in laboratory experiments: a bubble game in which agents trade sequen-
+tially and do not always know where they stand in the sequence. Our game
+has a no bubble Nash equilibrium when there is a nite price cap, and an
+additional bubble equilibrium when there is no price cap.
+Analyzing our experimental data, some descriptive statistics show that
+speculation increases with the number of steps of iterated reasoning needed
+to reach equilibrium and with the probability that a subject is not last in the
+market sequence. We then oer maximum likelihood estimations of various
+behavioral game theory models including, but not limited to, cognitive hi-
+there is also some variability in the estimates of and  oered by Camerer, Ho, and
+Chong (2004) and Mc Kelvey and Palfrey (1995), respectively.
+46In a cursed equilibrium, agents underestimate the correlation between players' infor-
+mation and action. As noted by Jehiel and Koessler (2008), the fully cursed equilibrium
+of Eyster and Rabin (2005) is equivalent to an ABEE in which analogy-classes correspond
+to the private information partition.
+27erarchy (Ho, Camerer, and Chong, 2004), quantal response equilibrium (Mc
+Palfrey and Palfrey, 1995), and analogy-based expectation equilibrium (Je-
+hiel, 2005). The main nding of the paper is that speculation in the bubble
+game is related to quantal responses and analogy classes.
+The experimental setting proposed in the present paper opens several av-
+enues of research. It would be interesting to study whether the occurrence of
+bubbles (rational and irrational) vary with the number of traders, the intro-
+duction of risk in the underlying asset payo, and the level of transparency
+(one could proxy for transparency by setting a non-null probability that a
+trade is publicly announced). It would also be interesting to test whether the
+structural estimations of behavioral game theory models would be dierent
+after allowing for a high number of repetitions of the bubble game. Finally,
+it could be fruitful to extend the experimental setting to cases in which the
+price path and the timing are left at the discretion of traders. This would
+allow testing whether traders are able to coordinate on a price path and a
+timing that sustains rational bubbles.
+287 Appendix
+Appendix A: Extensive form of the game with two players
+n=0 
+n=1 N NNi
+i
+i-i
+-i
+-i
+-i
+-i
+-i
+-i(10;0) 
+(0;1) 
+(1;1) 
+(1;1) 
+(0;10) 
+(1;1) 
+(1;0) 
+(1;1) 1/2 
+1/4 1/2 
+1/2 
+1/2 bb
+nb 
+b
+nb 
+b
+nb 
+b
+nb nb 
+b
+nb 
+(10;0) 
+(0;1) 
+(1;1) 
+(1;1) 
+n=1 
+n=2 Ni-i
+-i
+-i
+-i
+-i
+-ii
+i1/8 
+1/16 
+…1/2 
+1/2 
+1/2 (0;10) 
+(1;1) 
+(1;0) 
+(1;1) 
+(10;0) 
+(0;1) 
+(1;1) 
+(1;1) 
+(0;10) 
+(1;1) 
+(1;0) 
+(1;1) 
+At each node, Nature (N), player ior player ichoose an action. ( x;y)
+represents the payos; xfor playeri, andyfor player i. Dotted lines
+relate nodes that are observationally equivalent. brefers to the buy
+decision,nbto the refusal decision.
+29Appendix B: Instructions for the case where K= 10;000
+Welcome to this market game. Please read carefully the following instructions. They
+are identical for all participants. Please do not communicate with the other participants,
+stay quiet, and turn o your mobile phone during the game. If you have questions, please
+raise your hand. An instructor will come and answer.
+As an appreciation for your presence today, you receive a participation fee of 5 euros.
+In addition to this amount, you can earn money during the game. The game will last
+approximately half an hour, including the reading of the instructions.
+Exchange process
+To play this game, we form groups of three players. Each player is endowed with one
+euro which can be used to buy an asset. Your task during the game is thus to choose
+whether you want to buy or not the asset. This asset does not generate any dividend. If
+the asset price exceeds one euro, you can still buy the asset. We indeed consider that a
+nancial partner (who is not part of the game) provides you with the additional capital and
+shares prots with you according to the respective capital invested. The market proceeds
+sequentially. The rst player is proposed to buy at a price P1. If he buys, he proposes to
+sell the asset to the second player at a price which is ten times higher, P2= 10P1. If the
+second player accepts to buy, the rst player ends up the game with 10 euros. The second
+player then proposes to sell the asset to the third trader at a price P3= 10P2= 100P1.
+If the third player buys the asset, the second player ends up the game with 10 euros. The
+third player does not nd anybody to whom he can sell the asset. Since this asset does
+not generate any dividend, he ends up the game with 0 euro. This game is summarized in
+the following gure.
+Buy Buy Buy 
+Buy Buy Buy P1 P2 P3
+(10,10,0) 
+(1,1,1) (0,1,1) (10,0,1) 
+30At the beginning of the game, players do not know their position in the market se-
+quence. Positions are randomly determined with one chance out of three for each player
+to be rst, second or third.
+Proposed prices
+The priceP1that is proposed to the rst player is random. This price is a power of
+10 and is determined as follows:
+PriceP1Probability that this price is realized
+1 1/2 (50%)
+10 1/4 (25%)
+100 1/8 (12.5%)
+1,000 1/16 (6.3%)
+10,000 1/16 (6.3%)
+Players decisions are made simultaneously and privately. For example, if the rst price
+P1= 1 has been drawn, the prices that are simultaneously proposed to the three players
+are:P1= 1 for the rst player, P2= 10 for the second player, and P3= 100 for the
+third player. Identically, if the rst price P1= 10;000 has been drawn, the prices that
+are simultaneously proposed to the three players are: P1= 10;000 for the rst player,
+P2= 100;000 for the second player, and P3= 1;000;000 for the third player.
+The prices that you are been proposed can give you the following information regarding
+your position in the market sequence:
+- if you are proposed to buy at a price of 1, you are sure to be rst;
+- if you are proposed to buy at a price of 10, you have one chance out of three to be
+rst and two chances out of three to be second in the market sequence;
+- if you are proposed to buy at a price of 100 or 1,000, you have one chance out of
+seven to be rst, two chances out of seven to be second, and four chances out seven to be
+last in the market sequence;
+- if you are proposed to buy at a price of 10,000, you have one chance out of four to
+be rst, one chance out of four to be second, and two chances out four to be last.
+- if you are proposed to buy at a price of 100,000, you have one chance out of two to
+be second, and one chance out of two to be third.
+- if you are proposed to buy at a price of 1,000,000, you are sure to be last.
+In order to preserve anonymity, a number will be assigned to each player. Once
+decision will be made, we will tell you (anonymously) the group to which you belong, your
+position in the market sequence, if you are proposed to buy, and your nal gain.
+Do you have any question?
+31References
+[1] Abreu D., and M. K. Brunnermeier, 2003, Bubbles and Crashes, Econometrica , 71(1),
+173-204.
+[2] Ackert L. F., N. Charupat, B. K. Church, and R. Deaves, 2005, Bubbles in Experi-
+mental Asset Markets: Irrational Exuberance No More, mimeo .
+[3] Ackert L. F., N. Charupat, R. Deaves, and B. Kluger, 2006, The Origins of Bubbles
+in Laboratory Asset Markets, mimeo .
+[4] Allen, F., and G. Gorton, 1993, Churning Bubbles, Review of Economic Studies , 60,
+813-836.
+[5] Allen, F., S. Morris, and A. Postlewaite, 1993, Finite Bubbles with Short-Sale Con-
+straints and Asymmetric Information, Journal of Economic Theory , 61, 206-229.
+[6] Asparouhova, E., P. Bossaerts, and A. Tran, 2011, Market Bubbles and Crashes as
+an Expression of Tension between Social and Individual Rationality: Experiments,
+mimeo .
+[7] Bianchi, M., and P. Jehiel, 2011, Bubbles and Crashes with Partially Sophisticated
+Investors, mimeo .
+[8] Blanchard O., 1979, Speculative Bubbles, Crashes, and Rational Expectations, Eco-
+nomic Letters , 3, 387-389.
+[9] Brunnermeier M. K., 2009, Bubbles, Entry in The New Palgrave Dictionary of Eco-
+nomics , edited by Steven Durlauf and Lawrence Blume, 2nd edition.
+[10] Brunnermeier M. K., and J. Morgan, 2010, Clock Games: Theory and Experiments,
+Games and Economic Behavior , 68, 532-550.
+[11] Camerer C., 1989, Bubbles and Fads in Asset Prices: A Review of Theory and Evi-
+dence, Journal of Economic Surveys , vol. 3, 3-41.
+[12] Camerer C., 2003, Behavioral Game Theory: Experiments in Strategic Interaction ,
+Princeton University Press.
+[13] Camerer C., T.-H. Ho, and J.-K. Chong, 2004, A cognitive hierarchy model of one-
+shot games, Quarterly Journal of Economics , vol. 119, 861-898.
+[14] Camerer C. and D. Lovallo, 1999, Overcondence and Excess Entry: An Experimental
+Approach, American Economic Review , 89, 306-318.
+[15] Camerer C., S. Nunnari, and T. Palfrey, 2012, Quantal Response and Nonequilibrium
+Beliefs Explain Overbidding in Maximum-Value Auctions, Caltech Social Science
+Working Paper no. 1349.
+[16] Carrillo J., and T. Palfrey, 2009, The Compromise Game: Two-Sided Adverse Selec-
+tion in the Laboratory, American Economic Journal: Microeconomics , 1, 151-181.
+[17] Carrillo J., and T. Palfrey, 2011, No Trade, Games and Economic Behavior , 71, 66-87.
+[18] Conlon J., 2004, Simple Finite Horizon Bubbles Robust to Higher Order Knowledge,
+Econometrica , vol. 72, 927-936.
+32[19] Costa-Gomes M., and V. Crawford, 2006, Cognition and Behavior in TwoPerson
+Guessing Games: An Experimental Study, American Economic Review , 96, 1737-
+1768.
+[20] Costa-Gomes M., V. Crawford, and B. Broseta, 2001, Cognition and Behavior in
+Normal-Form Games: An Experimental Study, Econometrica , 69, 1193-1235.
+[21] Crawford V., and N. Iriberri, 2007, Level-k Auctions: Can Boundedly Rational
+Strategic Thinking Explain the Winner's Curse and Overbidding in Private-Value
+Auctions?", Econometrica , 75, 1721-1770.
+[22] Doblas-Madrid A., 2012, A Robust Model of Bubbles with Multidimensional Uncer-
+tainty, forthcoming Econometrica .
+[23] Dufwenberg M., T. Lindqvist, and E. Moore, 2005, Bubbles and Experience: An
+Experiment, American Economic Review , vol. 95, 1731-1737.
+[24] Dulleck, U., and J. Oechssler, 1997, The absent-minded centipede, Economics Letters ,
+vol. 55, 309-315.
+[25] Eyster E. and M. Rabin, 2005, Cursed Equilibrium, Econometrica , 73, 1623-1672.
+[26] Geanakoplos, J., 1992, Common Knowledge, Journal of Economic Perspectives , 6,
+52-83.
+[27] Harrison G., J. List and C. Towe, 2007, Naturally Occurring Preferences and Exoge-
+nous Laboratory Experiments: A Case Study of Risk Aversion, Econometrica , 75,
+433-458.
+[28] Holt, C. A., and S. K. Laury, 2002, Risk Aversion and Incentive Eects, American
+Economic Review , 92, 1644-1655.
+[29] Huck, S., P. Jehiel, and T. Rutter, 2011, Feedback Spillover and Analogy-based
+Expectations: a Multi-Game Experiment, Games and Economic Behavior , 71, 351-
+365.
+[30] Jehiel, P., 2005, Analogy-based expectation equilibrium, Journal of Economic Theory ,
+123, 81-104.
+[31] Jehiel, P., and F. Koessler, 2008, Revisiting Games of Incomplete Information with
+Analogy-Based Expectations, Games and Economic Behavior , 62, 533-557.
+[32] Kawagoe, T. and H. Takizawa, 2010, Level-K Analysis of Experimental Centipede
+Games, mimeo .
+[33] Lei V., C. Noussair and C. Plott (2001), Nonspeculative Bubbles in Experimental
+Asset Markets: Lack of Common Knowledge of Rationality vs. Actual Irrationality,
+Econometrica , 69(4), 831.859.
+[34] Mc Kelvey, R. D., and T. R. Palfrey, 1992, An Experimental Study of the Centipede
+Game, Econometrica , vol. 60, 803-836.
+[35] Mc Kelvey, R. D. and T. R. Palfrey, 1995, Quantal Response Equilibrium for Normal
+Form Games, Games and Economic Behavior , 10, 6-38.
+[36] Mc Kelvey, R. D. and T. R. Palfrey, 1998, Quantal Response Equilibrium for Exten-
+sive Form Games, Experimental Economics , 1, 9-41.
+33[37] Moinas, S. and S. Pouget, 2012, Supplementary Appendix to \The Bubble Game:
+An Experimental Study of Speculation", mimeo .
+[38] Morris, S., A. Postlewaite, and H. Shin, 1995, Depth of Knowledge and the Eect of
+Higher Order Uncertainty, Economic Theory , 6, 453-467.
+[39] Morris, S., R. Rob, and H. Shin, 1995, p-Dominance and Belief Potential, Economet-
+rica, 63, 145-157.
+[40] Nagel, R., 1995, Unraveling in Guessing Games: An Experimental Study, American
+Economic Review , 85, 1313-1326.
+[41] Nalebu, B., 1989, The Other Person's Envelope is Always Greener, The Journal of
+Economic Perspectives , Vol. 3, 171-181.
+[42] Noussair, C., S. Robin, and B. Rueux, 2001, Price Bubbles in Laboratory Asset
+Markets with Constant Fundamental Values, Experimental Economics , 4, 87-105.
+[43] Palfrey, T., and S. Wang, 2012, Speculative Overpricing in Asset Markets with Infor-
+mation Flows, forthcoming Econometrica .
+[44] Porter, D. P & Smith, V. L, 1995, Futures Contracting and Dividend Uncertainty in
+Experimental Asset, University of Chicago Press, vol. 68, 509-41.
+[45] Rogers, B., T. Palfrey, and C. Camerer, 2009, Heterogeneous Quantal Response Equi-
+librium and Cognitive Hierarchies, Journal of Economic Theory , 144, 1440-1467.
+[46] Smith V., G. Suchanek, and A. Williams, 1988, Bubbles, Crashes, and Endogenous
+Expectations in Experimental Spot Asset Markets, Econometrica , 56, 1119-1151.
+[47] Stahl, D., and P. Wilson, 1995, On Players Models of Other Players: Theory and
+Experimental Evidence, Games and Economic Behavior , 10, 213-254.
+[48] Tirole J., 1982, On the possibility of speculation under rational expectations, Econo-
+metrica , 50, 1163-1181.
+[49] Tirole J., 1985, Asset Bubbles and Overlapping Generations, Econometrica , 53, 1499-
+1528.
+[50] Van Boening, M.V., Williams, A.W., and LaMaster S. 1993. Price bubbles and crashes
+in experimental call. markets. Economic Letters , 41, 179-185.
+[51] Vuong, Q., 1989, Likelihood Ratio Tests for Model Selection and non-nested Hy-
+potheses, Econometrica , 57, 307-333.
+[52] Weil P., 1987, Condence and the Real Value of Money in an Overlapping Generations
+Economy, Quarterly Journal of Economics , 102, 1-22.
+[53] Weizs acker G., 2003, Ignoring the Rationality of Others: Evidence from Experimental
+Normal-form Games, Games and Economic Behavior , 44, 145-171.
+34

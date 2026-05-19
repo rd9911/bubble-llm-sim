@@ -46,12 +46,13 @@ The paper ran **234 subjects** across **4 treatments**:
 
 ```bash
 bubble-sim ingest-human \
-  --input-path data/raw/moinas_pouget_2013.csv \
+  --input-path data/raw/data_bubble_game.xlsx \
   --dataset-name human_mp2013 \
-  --output-dir data/clean
+  --output-dir data/clean \
+  --source-config configs/data_sources/bubble_game_original.yaml
 ```
 
-This converts the raw CSV into the canonical Parquet format used by the evaluation pipeline.
+This converts the raw XLSX into the canonical Parquet format used by the evaluation pipeline.
 
 ### Step 2: Create Train/Test Splits
 

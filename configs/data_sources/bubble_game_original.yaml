@@ -1,0 +1,30 @@
+source_name: bubble_game_original
+format: xlsx
+sheet_name: learning
+
+columns:
+  episode_id: Session
+  cap_value: Cap
+  period_index: Period
+  trader_id: Subject
+  group_id: Group
+  payoff_this_period: Profit
+  cumulative_payoff: TotalProfit
+  position: Position
+  offered_price: BuyPrice
+  action: BuyDecision
+  step: Step
+
+constants:
+  env_name: BubbleGameEnv
+  env_version: 0.1.0
+  asset_value: 0
+  limited_liability: true
+  position_uncertainty: true
+  can_infer_from_price: true
+  n_traders_total: 5
+
+value_maps:
+  action:
+    1: buy
+    0: no_buy
